@@ -7,27 +7,48 @@
   <title>Money's the Matter | Stories About Money</title>
   <meta
     name="description"
-    content="Money's the Matter is a podcast about money, history, psychology, and the ideas that still shape us."
+    content="Money's the Matter is a narrative podcast about money, history, psychology, and the ideas that still shape us."
   />
 
   <meta property="og:title" content="Money's the Matter" />
   <meta
     property="og:description"
-    content="Stories about money. History that still shapes us."
+    content="Stories About Money. History That Still Shapes Us."
   />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="mtm-logo.png" />
+  <meta property="og:url" content="https://moneysthematter.com/" />
+  <meta
+    property="og:image"
+    content="https://moneysthematter.com/mtm-logo.png"
+  />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="Money's the Matter RSS Feed"
+    href="https://feeds.buzzsprout.com/2633998.rss"
+  />
 
   <style>
     :root {
       --background: #07090d;
-      --panel: rgba(17, 21, 29, 0.72);
+      --background-soft: #0b0f16;
+      --panel: rgba(17, 21, 29, 0.76);
+      --panel-solid: #11151d;
       --cream: #f3eadc;
-      --muted: #cfc5b5;
-      --navy: #0c1d37;
+      --cream-soft: #e4d7c4;
+      --muted: #b8afa3;
+      --muted-dark: #8e877d;
       --gold: #b98a3d;
       --gold-light: #d6ad65;
-      --border: rgba(185, 138, 61, 0.45);
+      --border: rgba(185, 138, 61, 0.38);
+      --border-soft: rgba(243, 234, 220, 0.11);
+      --sans: Arial, Helvetica, sans-serif;
+      --serif: Georgia, "Times New Roman", serif;
+      --shadow: 0 30px 90px rgba(0, 0, 0, 0.4);
     }
 
     * {
@@ -40,174 +61,829 @@
 
     body {
       margin: 0;
-      min-height: 100vh;
       color: var(--cream);
       background:
-        radial-gradient(circle at 50% 0%, rgba(32, 43, 61, 0.42), transparent 38%),
+        radial-gradient(
+          circle at 50% 0%,
+          rgba(32, 43, 61, 0.42),
+          transparent 34%
+        ),
         linear-gradient(180deg, #090c12 0%, var(--background) 100%);
-      font-family: Georgia, "Times New Roman", serif;
+      font-family: var(--serif);
     }
 
-    .page {
-      min-height: 100vh;
+    img {
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .shell {
+      width: min(1160px, calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid var(--border-soft);
+      background: rgba(7, 9, 13, 0.88);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+
+    .brand-name {
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-family: var(--sans);
+      font-size: 0.88rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--cream);
+    }
+
+    .hero {
+      min-height: calc(100vh - 72px);
       display: grid;
       place-items: center;
-      padding: 48px 22px;
+      padding: 72px 0 84px;
     }
 
-    .card {
-      width: min(980px, 100%);
+    .hero-card {
+      width: 100%;
       text-align: center;
-      padding: clamp(34px, 6vw, 76px);
+      padding: clamp(38px, 7vw, 86px);
       border: 1px solid var(--border);
-      border-radius: 28px;
+      border-radius: 30px;
       background: var(--panel);
-      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.45);
-      backdrop-filter: blur(8px);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(9px);
     }
 
-    .logo {
+    .hero-logo {
       display: block;
-      width: min(390px, 78vw);
-      height: auto;
-      margin: 0 auto 34px;
+      width: min(330px, 70vw);
+      margin: 0 auto 30px;
       border-radius: 50%;
       filter: drop-shadow(0 18px 32px rgba(0, 0, 0, 0.42));
     }
 
-    .eyebrow {
-      margin: 0 0 14px;
+    .eyebrow,
+    .section-kicker,
+    .episode-number,
+    .episode-row-number {
       color: var(--gold-light);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.79rem;
+      font-family: var(--sans);
+      font-size: 0.78rem;
       font-weight: 700;
-      letter-spacing: 0.22em;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
     }
 
+    .eyebrow {
+      margin: 0 0 16px;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
     h1 {
-      margin: 0;
-      font-size: clamp(2.1rem, 6vw, 4.5rem);
+      max-width: 900px;
+      margin: 0 auto;
+      font-size: clamp(2.5rem, 7vw, 5.3rem);
       font-weight: 500;
-      letter-spacing: 0.025em;
-      line-height: 1.05;
+      letter-spacing: -0.02em;
+      line-height: 1.02;
     }
 
     .tagline {
-      max-width: 720px;
-      margin: 22px auto 0;
+      margin: 24px auto 0;
       color: var(--gold-light);
-      font-size: clamp(1.18rem, 2.5vw, 1.65rem);
+      font-size: clamp(1.2rem, 2.6vw, 1.72rem);
       line-height: 1.5;
     }
 
-    .message {
-      max-width: 680px;
-      margin: 30px auto 0;
+    .hero-copy {
+      max-width: 720px;
+      margin: 28px auto 0;
       color: var(--muted);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 1.03rem;
-      line-height: 1.8;
+      font-family: var(--sans);
+      font-size: 1.04rem;
+      line-height: 1.85;
     }
 
-    .button {
+    .platform-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      max-width: 900px;
+      margin: 34px auto 0;
+    }
+
+    .platform-button {
+      min-height: 62px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-width: 235px;
-      margin-top: 34px;
-      padding: 15px 24px;
-      border: 1px solid var(--gold);
-      border-radius: 999px;
-      color: #090c12;
-      background: linear-gradient(135deg, var(--gold-light), var(--gold));
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.96rem;
-      font-weight: 800;
-      letter-spacing: 0.04em;
+      padding: 14px 18px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      color: var(--cream);
+      background: rgba(7, 9, 13, 0.5);
+      font-family: var(--sans);
+      font-size: 0.94rem;
+      font-weight: 700;
       text-decoration: none;
-      transition: transform 160ms ease, box-shadow 160ms ease;
+      transition:
+        transform 160ms ease,
+        border-color 160ms ease,
+        background 160ms ease;
     }
 
-    .button:hover,
-    .button:focus-visible {
+    .platform-button:hover,
+    .platform-button:focus-visible {
       transform: translateY(-2px);
-      box-shadow: 0 12px 30px rgba(185, 138, 61, 0.25);
+      border-color: var(--gold-light);
+      background: rgba(185, 138, 61, 0.09);
     }
 
-    .note {
-      margin: 20px 0 0;
-      color: #9f978c;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.86rem;
+    .secondary-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 23px;
+      font-family: var(--sans);
+      font-size: 0.88rem;
     }
 
-    footer {
-      margin-top: 44px;
-      padding-top: 25px;
-      border-top: 1px solid rgba(243, 234, 220, 0.12);
-      color: #8e877d;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.8rem;
-      letter-spacing: 0.04em;
+    .secondary-actions a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .secondary-actions a:hover,
+    .secondary-actions a:focus-visible {
+      color: var(--gold-light);
+    }
+
+    .section {
+      padding: 96px 0;
+      border-top: 1px solid var(--border-soft);
+    }
+
+    .section-title {
+      max-width: 760px;
+      margin-bottom: 24px;
+      font-size: clamp(2rem, 5vw, 3.8rem);
+      font-weight: 500;
+      line-height: 1.08;
+    }
+
+    .latest,
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+      gap: clamp(34px, 7vw, 90px);
+      align-items: center;
+    }
+
+    .episode-art {
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      background: var(--panel-solid);
+      box-shadow: var(--shadow);
+    }
+
+    .episode-art img {
+      display: block;
+      width: 100%;
+      border-radius: 18px;
+    }
+
+    .episode-title {
+      margin-bottom: 20px;
+      font-size: clamp(2.1rem, 5vw, 4rem);
+      font-weight: 500;
+      line-height: 1.05;
+    }
+
+    .episode-summary,
+    .about-detail {
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 1.03rem;
+      line-height: 1.85;
+    }
+
+    .episode-platforms {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .episode-platforms a {
+      display: inline-flex;
+      align-items: center;
+      padding: 11px 15px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--cream-soft);
+      font-family: var(--sans);
+      font-size: 0.84rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .episode-platforms a:hover,
+    .episode-platforms a:focus-visible {
+      color: var(--gold-light);
+      border-color: var(--gold-light);
+    }
+
+    .about-grid {
+      grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
+      align-items: start;
+    }
+
+    .about-copy {
+      color: var(--cream-soft);
+      font-size: clamp(1.35rem, 2.6vw, 2rem);
+      line-height: 1.55;
+    }
+
+    .episodes-list {
+      display: grid;
+      gap: 1px;
+      border: 1px solid var(--border-soft);
+      border-radius: 22px;
+      overflow: hidden;
+      background: var(--border-soft);
+    }
+
+    .episode-row {
+      display: grid;
+      grid-template-columns: 120px minmax(0, 1fr) auto;
+      gap: 24px;
+      align-items: center;
+      padding: 26px 28px;
+      background: var(--background-soft);
+    }
+
+    .episode-row-title {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 1.28rem;
+    }
+
+    .episode-row-copy {
+      display: block;
+      color: var(--muted-dark);
+      font-family: var(--sans);
+      font-size: 0.91rem;
+      line-height: 1.55;
+    }
+
+    .episode-row-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      font-family: var(--sans);
+      font-size: 0.82rem;
+    }
+
+    .episode-row-links a {
+      color: var(--gold-light);
+      text-decoration: none;
+    }
+
+    .episode-row-links a:hover,
+    .episode-row-links a:focus-visible {
+      color: var(--cream);
+    }
+
+    .listen-section {
+      text-align: center;
+    }
+
+    .listen-card {
+      padding: clamp(30px, 6vw, 64px);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      background:
+        linear-gradient(180deg, rgba(185, 138, 61, 0.08), transparent),
+        var(--panel);
+    }
+
+    .listen-card .section-title {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .listen-card > p {
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+      color: var(--muted);
+      font-family: var(--sans);
+      line-height: 1.8;
+    }
+
+    .rss-link {
+      display: inline-block;
+      margin-top: 24px;
+      color: var(--gold-light);
+      font-family: var(--sans);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .rss-link:hover,
+    .rss-link:focus-visible {
+      color: var(--cream);
+    }
+
+    .site-footer {
+      padding: 36px 0 46px;
+      border-top: 1px solid var(--border-soft);
+      color: var(--muted-dark);
+      font-family: var(--sans);
+      font-size: 0.82rem;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+    }
+
+    .footer-links a:hover,
+    .footer-links a:focus-visible {
+      color: var(--cream);
+    }
+
+    @media (max-width: 900px) {
+      .platform-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .latest,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .episode-art {
+        max-width: 560px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .nav-links {
+        display: none;
+      }
+
+      .episode-row {
+        grid-template-columns: 1fr;
+      }
+
+      .episode-row-links {
+        justify-content: flex-start;
+      }
+
+      .episode-row-number {
+        grid-column: 1 / -1;
+      }
     }
 
     @media (max-width: 560px) {
-      .page {
-        padding: 22px 14px;
+      .shell {
+        width: min(100% - 24px, 1160px);
       }
 
-      .card {
-        padding: 30px 18px;
-        border-radius: 20px;
+      .hero {
+        padding: 36px 0 56px;
       }
 
-      .logo {
-        margin-bottom: 26px;
+      .hero-card {
+        padding: 32px 18px;
+        border-radius: 22px;
+      }
+
+      .section {
+        padding: 70px 0;
+      }
+
+      .platform-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .episode-row {
+        padding: 22px 20px;
       }
     }
   </style>
 </head>
 
 <body>
-  <main class="page">
-    <section class="card" aria-labelledby="page-title">
-      <img
-        class="logo"
-        src="mtm-logo.png"
-        alt="Money's the Matter podcast logo"
-      />
-
-      <p class="eyebrow">The permanent home is taking shape</p>
-
-      <h1 id="page-title">The stories have begun.</h1>
-
-      <p class="tagline">
-        Stories About Money.<br />
-        History That Still Shapes Us.
-      </p>
-
-      <p class="message">
-        The full Money's the Matter website is currently being built.
-        In the meantime, the podcast is already underway. Listen to the
-        trailer and current episodes on Buzzsprout.
-      </p>
-
-      <a
-        class="button"
-        href="https://www.buzzsprout.com/2633998/about"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Listen to the Podcast
+  <header class="site-header">
+    <div class="shell nav">
+      <a class="brand" href="#top" aria-label="Money's the Matter home">
+        <img class="brand-mark" src="mtm-logo.png" alt="" />
+        <span class="brand-name">Money's the Matter</span>
       </a>
 
-      <p class="note">Available wherever you listen to podcasts.</p>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#latest">Latest Episode</a>
+        <a href="#about">About</a>
+        <a href="#episodes">Episodes</a>
+        <a href="#listen">Listen</a>
+      </nav>
+    </div>
+  </header>
 
-      <footer>
-        © 2026 Money's the Matter. All rights reserved.
-      </footer>
+  <main id="top">
+    <section class="hero">
+      <div class="shell">
+        <div class="hero-card">
+          <img
+            class="hero-logo"
+            src="mtm-logo.png"
+            alt="Money's the Matter podcast logo"
+          />
+
+          <p class="eyebrow">A narrative podcast by Bryan Yach</p>
+
+          <h1>Money tells the story of civilization.</h1>
+
+          <p class="tagline">
+            Stories About Money.<br />
+            History That Still Shapes Us.
+          </p>
+
+          <p class="hero-copy">
+            Money's the Matter explores the history, psychology, and ideas behind
+            the financial world—through stories about trust, markets, ambition,
+            fear, innovation, and the strange agreements that connect us.
+          </p>
+
+          <div class="platform-grid" aria-label="Listen to Money's the Matter">
+            <a
+              class="platform-button"
+              href="https://podcasts.apple.com/podcast/id6797090925"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Apple Podcasts
+            </a>
+
+            <a
+              class="platform-button"
+              href="https://open.spotify.com/show/033ZMVAOk3TJEkOdaIOEJC"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Spotify
+            </a>
+
+            <a
+              class="platform-button"
+              href="https://music.amazon.com/podcasts/750e1dbd-d1ed-47b5-9a2e-bfb49ba24e11"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Amazon Music
+            </a>
+
+            <a
+              class="platform-button"
+              href="https://youtube.com/@moneysthematter"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              YouTube
+            </a>
+          </div>
+
+          <div class="secondary-actions">
+            <a href="#latest">Start with Episode One ↓</a>
+            <a
+              href="https://feeds.buzzsprout.com/2633998.rss"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Copy or open the RSS feed
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="latest">
+      <div class="shell latest">
+        <div class="episode-art">
+          <img src="mtm-logo.png" alt="Money's the Matter episode artwork" />
+        </div>
+
+        <div>
+          <p class="episode-number">Season One · Episode One</p>
+          <h2 class="episode-title">Money: Humanity's Greatest Agreement</h2>
+
+          <p class="episode-summary">
+            Before coins, banknotes, stock markets, or numbers glowing on a
+            screen, people faced a more basic problem: how do we exchange value
+            with people who may not want what we have? The first episode follows
+            that question from memory and barter toward money, trust, and one of
+            humanity's most enduring agreements.
+          </p>
+
+          <div class="episode-platforms" aria-label="Listen to Episode One">
+            <a
+              href="https://podcasts.apple.com/podcast/id6797090925"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Apple
+            </a>
+            <a
+              href="https://open.spotify.com/show/033ZMVAOk3TJEkOdaIOEJC"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Spotify
+            </a>
+            <a
+              href="https://music.amazon.com/podcasts/750e1dbd-d1ed-47b5-9a2e-bfb49ba24e11"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Amazon
+            </a>
+            <a
+              href="https://youtube.com/@moneysthematter"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              YouTube
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="shell about-grid">
+        <div>
+          <p class="section-kicker">About the show</p>
+          <h2 class="section-title">Why does money work at all?</h2>
+        </div>
+
+        <div>
+          <p class="about-copy">
+            We earn it, save it, spend it, invest it, fear losing it, and rarely
+            stop to ask where it came from—or what it has asked humanity to
+            believe.
+          </p>
+
+          <p class="about-detail">
+            Money's the Matter is a narrative podcast exploring financial
+            history, psychology, markets, and the ideas that still shape everyday
+            life. Each episode begins with a story and follows the people, places,
+            and ordinary frustrations behind familiar financial systems.
+          </p>
+
+          <p class="about-detail">
+            Bryan Yach is a financial planner and storyteller with fifteen years
+            of experience helping families navigate money and major life
+            decisions. The podcast grew from his curiosity about the history and
+            human behavior hidden beneath the numbers.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="episodes">
+      <div class="shell">
+        <p class="section-kicker">Episodes</p>
+        <h2 class="section-title">Begin at the beginning.</h2>
+
+        <div class="episodes-list">
+          <article class="episode-row">
+            <span class="episode-row-number">S1 · E1</span>
+
+            <span>
+              <span class="episode-row-title">
+                Money: Humanity's Greatest Agreement
+              </span>
+              <span class="episode-row-copy">
+                A journey from memory and exchange toward trust, cities, and
+                money.
+              </span>
+            </span>
+
+            <span class="episode-row-links">
+              <a
+                href="https://podcasts.apple.com/podcast/id6797090925"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Apple
+              </a>
+              <a
+                href="https://open.spotify.com/show/033ZMVAOk3TJEkOdaIOEJC"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Spotify
+              </a>
+              <a
+                href="https://youtube.com/@moneysthematter"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                YouTube
+              </a>
+            </span>
+          </article>
+
+          <article class="episode-row">
+            <span class="episode-row-number">Trailer</span>
+
+            <span>
+              <span class="episode-row-title">
+                Introducing Money's the Matter
+              </span>
+              <span class="episode-row-copy">
+                A brief introduction to the stories, questions, and history
+                behind the show.
+              </span>
+            </span>
+
+            <span class="episode-row-links">
+              <a
+                href="https://podcasts.apple.com/podcast/id6797090925"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Apple
+              </a>
+              <a
+                href="https://open.spotify.com/show/033ZMVAOk3TJEkOdaIOEJC"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Spotify
+              </a>
+              <a
+                href="https://youtube.com/@moneysthematter"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                YouTube
+              </a>
+            </span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section listen-section" id="listen">
+      <div class="shell">
+        <div class="listen-card">
+          <p class="section-kicker">Listen and follow</p>
+
+          <h2 class="section-title">
+            Find Money's the Matter in the app you already use.
+          </h2>
+
+          <p>
+            Follow the show on Apple Podcasts, Spotify, Amazon Music, or YouTube
+            so new episodes appear automatically.
+          </p>
+
+          <div class="platform-grid">
+            <a
+              class="platform-button"
+              href="https://podcasts.apple.com/podcast/id6797090925"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Apple Podcasts
+            </a>
+
+            <a
+              class="platform-button"
+              href="https://open.spotify.com/show/033ZMVAOk3TJEkOdaIOEJC"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Spotify
+            </a>
+
+            <a
+              class="platform-button"
+              href="https://music.amazon.com/podcasts/750e1dbd-d1ed-47b5-9a2e-bfb49ba24e11"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Amazon Music
+            </a>
+
+            <a
+              class="platform-button"
+              href="https://youtube.com/@moneysthematter"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              YouTube
+            </a>
+          </div>
+
+          <a
+            class="rss-link"
+            href="https://feeds.buzzsprout.com/2633998.rss"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Prefer another podcast app? Subscribe with the RSS feed →
+          </a>
+        </div>
+      </div>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-row">
+      <span>© 2026 Money's the Matter. All rights reserved.</span>
+
+      <div class="footer-links">
+        <a href="#latest">Latest Episode</a>
+        <a href="#about">About</a>
+        <a href="#episodes">Episodes</a>
+        <a
+          href="https://feeds.buzzsprout.com/2633998.rss"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          RSS
+        </a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
