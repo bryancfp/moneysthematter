@@ -1,1 +1,303 @@
-templates
+<!--
+MONEY'S THE MATTER — EPISODE TEMPLATE
+
+Publishing workflow:
+1. Copy this file.
+2. Create a new folder inside /episodes/.
+3. Rename the copied file index.html.
+4. Replace every bracketed placeholder.
+5. Preview locally.
+6. Commit and push.
+
+Do not publish this template directly.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CKSZ8CZTVV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-CKSZ8CZTVV");
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>[EPISODE TITLE] | Money's the Matter</title>
+
+  <meta
+    name="description"
+    content="[EPISODE META DESCRIPTION]"
+  />
+
+  <link
+    rel="canonical"
+    href="https://moneysthematter.com/episodes/[EPISODE SLUG]/"
+  />
+
+  <meta property="og:title" content="[EPISODE TITLE]" />
+
+  <meta
+    property="og:description"
+    content="[EPISODE SOCIAL DESCRIPTION]"
+  />
+
+  <meta property="og:type" content="article" />
+
+  <meta
+    property="og:url"
+    content="https://moneysthematter.com/episodes/[EPISODE SLUG]/"
+  />
+
+  <meta
+    property="og:image"
+    content="https://moneysthematter.com/[EPISODE IMAGE PATH]"
+  />
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/favicon-32x32.png"
+  />
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="/favicon-16x16.png"
+  />
+
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="Money's the Matter RSS Feed"
+    href="https://feeds.buzzsprout.com/2633998.rss"
+  />
+
+  <link rel="stylesheet" href="/css/main.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="shell nav">
+      <a class="brand" href="/" aria-label="Money's the Matter home">
+        <img class="brand-mark" src="/images/logo/mtm-logo.png" alt="" />
+        <span class="brand-name">Money's the Matter</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="/episodes/">Episodes</a>
+        <a href="/#about">About</a>
+        <a href="/#listen">Subscribe</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="episode-page">
+      <header class="episode-hero">
+        <div class="shell episode-hero-inner">
+          <p class="episode-number">
+            Season [SEASON NUMBER] · Episode [EPISODE NUMBER]
+          </p>
+
+          <h1 class="episode-page-title">[EPISODE TITLE]</h1>
+
+          <p class="episode-deck">
+            [EPISODE DECK]
+          </p>
+
+          <div class="episode-meta">
+            <span>Written and narrated by Bryan Yach, CFP®</span>
+            <span>[READING TIME] read</span>
+            <span>[LISTENING TIME] listen</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="episode-feature">
+        <div class="shell">
+          <div class="episode-feature-art">
+            <img
+              src="/[EPISODE IMAGE PATH]"
+              alt="[EPISODE IMAGE ALT TEXT]"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="episode-listen">
+        <div class="shell">
+          <div class="episode-listen-card">
+            <div>
+              <p class="section-kicker">Listen to the episode</p>
+              <h2>Choose your podcast app.</h2>
+            </div>
+
+            <div
+              class="episode-platforms"
+              aria-label="Listen to [EPISODE TITLE]"
+            >
+              <a
+                href="[APPLE EPISODE URL]"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Apple Podcasts
+              </a>
+
+              <a
+                href="[SPOTIFY EPISODE URL]"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Spotify
+              </a>
+
+              <a
+                href="[AMAZON EPISODE URL]"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Amazon Music
+              </a>
+
+              <a
+                href="[YOUTUBE EPISODE URL]"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                YouTube
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="shell episode-content-layout">
+        <aside class="episode-sidebar">
+          <div class="episode-sidebar-card">
+            <p class="section-kicker">In this episode</p>
+
+            <nav aria-label="Episode sections">
+              <a href="#story">The Story</a>
+              <a href="#transcript">Transcript</a>
+              <a href="#sources">Sources</a>
+            </nav>
+          </div>
+        </aside>
+
+        <div class="episode-article">
+          <section class="episode-section" id="story">
+            <p class="section-kicker">The story</p>
+
+            <h2>[STORY SECTION TITLE]</h2>
+
+            <p class="episode-lead">
+              [EPISODE LEAD]
+            </p>
+
+            <p>
+              [EPISODE SUMMARY PARAGRAPH 1]
+            </p>
+
+            <p>
+              [EPISODE SUMMARY PARAGRAPH 2]
+            </p>
+
+            <blockquote>
+              [FEATURED PULL QUOTE]
+            </blockquote>
+          </section>
+
+          <section class="episode-section" id="transcript">
+            <p class="section-kicker">Episode transcript</p>
+
+            <h2>[EPISODE TITLE]</h2>
+
+            <p class="transcript-note">
+              This transcript has been lightly edited for clarity and readability.
+            </p>
+
+            <!--
+              TRANSCRIPT FORMAT EXAMPLE
+
+              <h3>[SECTION HEADING]</h3>
+
+              <p>
+                [TRANSCRIPT PARAGRAPH]
+              </p>
+
+              <blockquote>
+                [OPTIONAL PULL QUOTE]
+              </blockquote>
+            -->
+
+            [PASTE FORMATTED TRANSCRIPT HERE]
+          </section>
+
+          <section class="episode-section" id="sources">
+            <p class="section-kicker">Sources and further reading</p>
+
+            <h2>Explore the ideas behind the episode.</h2>
+
+            <div class="sources-list">
+              <!-- Duplicate this article block for each source. -->
+              <article>
+                <h3>[SOURCE TITLE]</h3>
+                <p>[AUTHOR OR PUBLICATION]</p>
+              </article>
+            </div>
+          </section>
+
+          <nav class="episode-navigation" aria-label="Episode navigation">
+            <a href="[PREVIOUS EPISODE URL]">
+              <span>Previous episode</span>
+              <strong>[PREVIOUS EPISODE TITLE]</strong>
+            </a>
+
+            <a href="/episodes/">
+              <span>All episodes</span>
+              <strong>Return to the episode archive</strong>
+            </a>
+
+            <a href="[NEXT EPISODE URL]">
+              <span>Next episode</span>
+              <strong>[NEXT EPISODE TITLE]</strong>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-row">
+      <span>© 2026 Money's the Matter. All rights reserved.</span>
+
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/episodes/">Episodes</a>
+        <a href="/#about">About</a>
+
+        <a
+          href="https://feeds.buzzsprout.com/2633998.rss"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          RSS
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
