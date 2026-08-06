@@ -6,10 +6,36 @@ Publishing workflow:
 2. Create a new folder inside /episodes/.
 3. Rename the copied file index.html.
 4. Replace every bracketed placeholder.
-5. Preview locally.
-6. Commit and push.
+5. Delete any unused previous/next navigation link.
+6. Preview locally.
+7. Commit and push.
 
 Do not publish this template directly.
+
+Placeholder format:
+[EPISODE-TITLE]
+[EPISODE-SLUG]
+[EPISODE-META-DESCRIPTION]
+[EPISODE-SOCIAL-DESCRIPTION]
+[EPISODE-IMAGE-PATH]
+[EPISODE-IMAGE-ALT]
+[SEASON-NUMBER]
+[EPISODE-NUMBER]
+[READING-TIME]
+[LISTENING-TIME]
+[APPLE-URL]
+[SPOTIFY-URL]
+[AMAZON-URL]
+[YOUTUBE-URL]
+[STORY-SECTION-TITLE]
+[EPISODE-LEAD]
+[EPISODE-SUMMARY-PARAGRAPH-1]
+[EPISODE-SUMMARY-PARAGRAPH-2]
+[FEATURED-PULL-QUOTE]
+[PREVIOUS-EPISODE-URL]
+[PREVIOUS-EPISODE-TITLE]
+[NEXT-EPISODE-URL]
+[NEXT-EPISODE-TITLE]
 -->
 
 <!DOCTYPE html>
@@ -19,9 +45,11 @@ Do not publish this template directly.
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CKSZ8CZTVV"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
+
     function gtag() {
       dataLayer.push(arguments);
     }
+
     gtag("js", new Date());
     gtag("config", "G-CKSZ8CZTVV");
   </script>
@@ -29,36 +57,52 @@ Do not publish this template directly.
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>[EPISODE TITLE] | Money's the Matter</title>
+  <title>[EPISODE-TITLE] | Money's the Matter</title>
 
   <meta
     name="description"
-    content="[EPISODE META DESCRIPTION]"
+    content="[EPISODE-META-DESCRIPTION]"
   />
 
   <link
     rel="canonical"
-    href="https://moneysthematter.com/episodes/[EPISODE SLUG]/"
+    href="https://moneysthematter.com/episodes/[EPISODE-SLUG]/"
   />
 
-  <meta property="og:title" content="[EPISODE TITLE]" />
+  <meta property="og:title" content="[EPISODE-TITLE]" />
 
   <meta
     property="og:description"
-    content="[EPISODE SOCIAL DESCRIPTION]"
+    content="[EPISODE-SOCIAL-DESCRIPTION]"
   />
 
   <meta property="og:type" content="article" />
 
   <meta
     property="og:url"
-    content="https://moneysthematter.com/episodes/[EPISODE SLUG]/"
+    content="https://moneysthematter.com/episodes/[EPISODE-SLUG]/"
   />
 
   <meta
     property="og:image"
-    content="https://moneysthematter.com/[EPISODE IMAGE PATH]"
+    content="https://moneysthematter.com/[EPISODE-IMAGE-PATH]"
   />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="[EPISODE-TITLE]" />
+
+  <meta
+    name="twitter:description"
+    content="[EPISODE-SOCIAL-DESCRIPTION]"
+  />
+
+  <meta
+    name="twitter:image"
+    content="https://moneysthematter.com/[EPISODE-IMAGE-PATH]"
+  />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
 
   <link
     rel="icon"
@@ -74,7 +118,20 @@ Do not publish this template directly.
     href="/favicon-16x16.png"
   />
 
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="/apple-touch-icon.png"
+  />
+
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <meta name="theme-color" content="#0b2239" />
+
+  <meta
+    name="apple-mobile-web-app-title"
+    content="Money's the Matter"
+  />
 
   <link
     rel="alternate"
@@ -90,7 +147,12 @@ Do not publish this template directly.
   <header class="site-header">
     <div class="shell nav">
       <a class="brand" href="/" aria-label="Money's the Matter home">
-        <img class="brand-mark" src="/images/logo/mtm-logo.png" alt="" />
+        <img
+          class="brand-mark"
+          src="/images/logo/mtm-logo.png"
+          alt=""
+        />
+
         <span class="brand-name">Money's the Matter</span>
       </a>
 
@@ -107,19 +169,19 @@ Do not publish this template directly.
       <header class="episode-hero">
         <div class="shell episode-hero-inner">
           <p class="episode-number">
-            Season [SEASON NUMBER] · Episode [EPISODE NUMBER]
+            Season [SEASON-NUMBER] · Episode [EPISODE-NUMBER]
           </p>
 
-          <h1 class="episode-page-title">[EPISODE TITLE]</h1>
+          <h1 class="episode-page-title">[EPISODE-TITLE]</h1>
 
           <p class="episode-deck">
-            [EPISODE DECK]
+            [EPISODE-DECK]
           </p>
 
           <div class="episode-meta">
             <span>Written and narrated by Bryan Yach, CFP®</span>
-            <span>[READING TIME] read</span>
-            <span>[LISTENING TIME] listen</span>
+            <span>[READING-TIME] read</span>
+            <span>[LISTENING-TIME] listen</span>
           </div>
         </div>
       </header>
@@ -128,8 +190,8 @@ Do not publish this template directly.
         <div class="shell">
           <div class="episode-feature-art">
             <img
-              src="/[EPISODE IMAGE PATH]"
-              alt="[EPISODE IMAGE ALT TEXT]"
+              src="/[EPISODE-IMAGE-PATH]"
+              alt="[EPISODE-IMAGE-ALT]"
             />
           </div>
         </div>
@@ -143,12 +205,16 @@ Do not publish this template directly.
               <h2>Choose your podcast app.</h2>
             </div>
 
+            <!--
+            Use the direct episode URL when available.
+            Otherwise, use the main show URL.
+            -->
             <div
               class="episode-platforms"
-              aria-label="Listen to [EPISODE TITLE]"
+              aria-label="Listen to [EPISODE-TITLE]"
             >
               <a
-                href="[APPLE EPISODE URL]"
+                href="[APPLE-URL]"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -156,7 +222,7 @@ Do not publish this template directly.
               </a>
 
               <a
-                href="[SPOTIFY EPISODE URL]"
+                href="[SPOTIFY-URL]"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -164,7 +230,7 @@ Do not publish this template directly.
               </a>
 
               <a
-                href="[AMAZON EPISODE URL]"
+                href="[AMAZON-URL]"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -172,7 +238,7 @@ Do not publish this template directly.
               </a>
 
               <a
-                href="[YOUTUBE EPISODE URL]"
+                href="[YOUTUBE-URL]"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -200,49 +266,49 @@ Do not publish this template directly.
           <section class="episode-section" id="story">
             <p class="section-kicker">The story</p>
 
-            <h2>[STORY SECTION TITLE]</h2>
+            <h2>[STORY-SECTION-TITLE]</h2>
 
             <p class="episode-lead">
-              [EPISODE LEAD]
+              [EPISODE-LEAD]
             </p>
 
             <p>
-              [EPISODE SUMMARY PARAGRAPH 1]
+              [EPISODE-SUMMARY-PARAGRAPH-1]
             </p>
 
             <p>
-              [EPISODE SUMMARY PARAGRAPH 2]
+              [EPISODE-SUMMARY-PARAGRAPH-2]
             </p>
 
             <blockquote>
-              [FEATURED PULL QUOTE]
+              [FEATURED-PULL-QUOTE]
             </blockquote>
           </section>
 
           <section class="episode-section" id="transcript">
             <p class="section-kicker">Episode transcript</p>
 
-            <h2>[EPISODE TITLE]</h2>
+            <h2>[EPISODE-TITLE]</h2>
 
             <p class="transcript-note">
               This transcript has been lightly edited for clarity and readability.
             </p>
 
             <!--
-              TRANSCRIPT FORMAT EXAMPLE
+            TRANSCRIPT FORMAT EXAMPLE
 
-              <h3>[SECTION HEADING]</h3>
+            <h3>[SECTION-HEADING]</h3>
 
-              <p>
-                [TRANSCRIPT PARAGRAPH]
-              </p>
+            <p>
+              [TRANSCRIPT-PARAGRAPH]
+            </p>
 
-              <blockquote>
-                [OPTIONAL PULL QUOTE]
-              </blockquote>
+            <blockquote>
+              [OPTIONAL-PULL-QUOTE]
+            </blockquote>
             -->
 
-            [PASTE FORMATTED TRANSCRIPT HERE]
+            [PASTE-FORMATTED-TRANSCRIPT-HERE]
           </section>
 
           <section class="episode-section" id="sources">
@@ -251,18 +317,24 @@ Do not publish this template directly.
             <h2>Explore the ideas behind the episode.</h2>
 
             <div class="sources-list">
-              <!-- Duplicate this article block for each source. -->
+              <!--
+              Duplicate this block for each source:
+
               <article>
-                <h3>[SOURCE TITLE]</h3>
-                <p>[AUTHOR OR PUBLICATION]</p>
+                <h3>[SOURCE-TITLE]</h3>
+                <p>[AUTHOR-OR-PUBLICATION]</p>
               </article>
+              -->
             </div>
           </section>
 
           <nav class="episode-navigation" aria-label="Episode navigation">
-            <a href="[PREVIOUS EPISODE URL]">
+            <!--
+            Delete this previous-episode link if there is no previous episode.
+            -->
+            <a href="[PREVIOUS-EPISODE-URL]">
               <span>Previous episode</span>
-              <strong>[PREVIOUS EPISODE TITLE]</strong>
+              <strong>[PREVIOUS-EPISODE-TITLE]</strong>
             </a>
 
             <a href="/episodes/">
@@ -270,9 +342,12 @@ Do not publish this template directly.
               <strong>Return to the episode archive</strong>
             </a>
 
-            <a href="[NEXT EPISODE URL]">
+            <!--
+            Delete this next-episode link if the next episode is not published.
+            -->
+            <a href="[NEXT-EPISODE-URL]">
               <span>Next episode</span>
-              <strong>[NEXT EPISODE TITLE]</strong>
+              <strong>[NEXT-EPISODE-TITLE]</strong>
             </a>
           </nav>
         </div>
