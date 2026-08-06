@@ -1,70 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CKSZ8CZTVV"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-CKSZ8CZTVV');
-  </script>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>
-    Money: Humanity's Greatest Agreement | Money's the Matter
-  </title>
-
+  <title>The Story of Coins | Trust Moves with Us | Money's the Matter</title>
   <meta
     name="description"
-    content="Why does money work at all? Explore the origins of exchange, trust, and one of humanity's most enduring agreements."
+    content="Travel to ancient Lydia and discover how the first stamped coins allowed trust to move beyond personal reputation, reshaping trade, government, and civilization."
   />
+  <link rel="canonical" href="https://moneysthematter.com/episodes/story-of-coins/" />
 
-  <link
-    rel="canonical"
-    href="https://moneysthematter.com/episodes/humanitys-greatest-agreement/"
-  />
-
-  <meta
-    property="og:title"
-    content="Money: Humanity's Greatest Agreement"
-  />
-
+  <meta property="og:title" content="The Story of Coins | Trust Moves with Us" />
   <meta
     property="og:description"
-    content="Before coins, banks, or markets, money began as a solution to a deeply human problem."
+    content="How a small piece of stamped metal allowed trust to travel farther than memory."
   />
-
   <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://moneysthematter.com/episodes/story-of-coins/" />
+  <meta property="og:image" content="https://moneysthematter.com/mtm-logo.png" />
 
-  <meta
-    property="og:url"
-    content="https://moneysthematter.com/episodes/humanitys-greatest-agreement/"
-  />
-
-  <meta
-    property="og:image"
-    content="https://moneysthematter.com/mtm-logo.png"
-  />
-
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="32x32"
-    href="/favicon-32x32.png"
-  />
-
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="16x16"
-    href="/favicon-16x16.png"
-  />
-
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="../../apple-touch-icon.png" />
   <link
     rel="alternate"
     type="application/rss+xml"
@@ -72,677 +30,453 @@
     href="https://feeds.buzzsprout.com/2633998.rss"
   />
 
-  <link rel="stylesheet" href="/css/main.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PodcastEpisode",
+    "name": "The Story of Coins | Trust Moves with Us",
+    "description": "How the first stamped coins allowed trust to move beyond personal reputation and reshape trade, government, and civilization.",
+    "episodeNumber": 2,
+    "partOfSeries": {
+      "@type": "PodcastSeries",
+      "name": "Money's the Matter",
+      "url": "https://moneysthematter.com/"
+    },
+    "url": "https://moneysthematter.com/episodes/story-of-coins/",
+    "image": "https://moneysthematter.com/mtm-logo.png",
+    "author": {
+      "@type": "Person",
+      "name": "Bryan Yach"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --background: #07090d;
+      --background-soft: #0b0f16;
+      --panel: rgba(17, 21, 29, 0.78);
+      --cream: #f3eadc;
+      --cream-soft: #e4d7c4;
+      --muted: #b8afa3;
+      --muted-dark: #8e877d;
+      --gold: #b98a3d;
+      --gold-light: #d6ad65;
+      --border: rgba(185, 138, 61, 0.38);
+      --border-soft: rgba(243, 234, 220, 0.11);
+      --sans: Arial, Helvetica, sans-serif;
+      --serif: Georgia, "Times New Roman", serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--cream);
+      background:
+        radial-gradient(circle at 50% 0%, rgba(32, 43, 61, 0.42), transparent 34%),
+        linear-gradient(180deg, #090c12 0%, var(--background) 100%);
+      font-family: var(--serif);
+    }
+    a { color: inherit; }
+    img { max-width: 100%; }
+    .shell { width: min(1040px, calc(100% - 36px)); margin: 0 auto; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid var(--border-soft);
+      background: rgba(7, 9, 13, 0.88);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand img {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      object-fit: contain;
+    }
+
+    .brand span {
+      font-size: 0.98rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      font-family: var(--sans);
+      font-size: 0.86rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .nav-links a:hover { color: var(--cream); }
+
+    .hero {
+      padding: 82px 0 74px;
+      text-align: center;
+    }
+
+    .episode-label {
+      margin: 0 0 18px;
+      color: var(--gold-light);
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 900px;
+      margin: 0 auto;
+      font-size: clamp(2.7rem, 7vw, 5.4rem);
+      font-weight: 500;
+      letter-spacing: -0.025em;
+      line-height: 1.02;
+    }
+
+    .subtitle {
+      margin: 20px 0 0;
+      color: var(--gold-light);
+      font-size: clamp(1.25rem, 2.8vw, 1.8rem);
+    }
+
+    .dek {
+      max-width: 760px;
+      margin: 30px auto 0;
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 1.06rem;
+      line-height: 1.85;
+    }
+
+    .player-card {
+      margin-top: 42px;
+      padding: 26px;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      background: var(--panel);
+    }
+
+    .player-placeholder {
+      padding: 26px;
+      border: 1px dashed var(--border);
+      border-radius: 15px;
+      color: var(--muted);
+      font-family: var(--sans);
+      line-height: 1.65;
+    }
+
+    .platform-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .platform {
+      min-height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 16px;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      background: rgba(7, 9, 13, 0.5);
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: 160ms ease;
+    }
+
+    .platform:hover {
+      transform: translateY(-2px);
+      border-color: var(--gold-light);
+      background: rgba(185, 138, 61, 0.09);
+    }
+
+    .platform img {
+      width: 25px;
+      height: 25px;
+    }
+
+    .section {
+      padding: 78px 0;
+      border-top: 1px solid var(--border-soft);
+    }
+
+    .section h2 {
+      margin: 0 0 26px;
+      font-size: clamp(2rem, 4.5vw, 3.5rem);
+      font-weight: 500;
+      line-height: 1.08;
+    }
+
+    .summary {
+      max-width: 780px;
+      color: var(--cream-soft);
+      font-size: 1.27rem;
+      line-height: 1.65;
+    }
+
+    .transcript {
+      max-width: 790px;
+      margin: 0 auto;
+    }
+
+    .transcript p {
+      margin: 0 0 1.35em;
+      color: var(--cream-soft);
+      font-size: 1.08rem;
+      line-height: 1.88;
+    }
+
+    .notice {
+      margin-bottom: 28px;
+      padding: 16px 18px;
+      border-left: 3px solid var(--gold);
+      color: var(--muted);
+      background: rgba(185, 138, 61, 0.07);
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .continue-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .continue-card {
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--background-soft);
+      text-decoration: none;
+    }
+
+    .continue-card small {
+      display: block;
+      margin-bottom: 9px;
+      color: var(--gold-light);
+      font-family: var(--sans);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .continue-card strong {
+      display: block;
+      font-size: 1.3rem;
+      line-height: 1.35;
+    }
+
+    .continue-card p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-family: var(--sans);
+      line-height: 1.6;
+    }
+
+    footer {
+      padding: 34px 0 44px;
+      border-top: 1px solid var(--border-soft);
+      color: var(--muted-dark);
+      font-family: var(--sans);
+      font-size: 0.82rem;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer-row a { text-decoration: none; }
+
+    @media (max-width: 780px) {
+      .nav-links { display: none; }
+      .platform-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .continue-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 520px) {
+      .shell { width: min(100% - 24px, 1040px); }
+      .hero { padding: 54px 0 58px; }
+      .platform-grid { grid-template-columns: 1fr; }
+      .player-card { padding: 16px; }
+    }
+  </style>
 </head>
 
 <body>
   <header class="site-header">
     <div class="shell nav">
-      <a class="brand" href="/" aria-label="Money's the Matter home">
-        <img
-          class="brand-mark"
-          src="/mtm-logo.png"
-          alt=""
-        />
-
-        <span class="brand-name">Money's the Matter</span>
+      <a class="brand" href="../../">
+        <img src="../../mtm-logo.png" alt="" />
+        <span>Money's the Matter</span>
       </a>
 
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="/episodes/">Episodes</a>
-        <a href="/#about">About</a>
-        <a href="/#listen">Subscribe</a>
+        <a href="../../">Home</a>
+        <a href="../../#episodes">Episodes</a>
+        <a href="#transcript">Transcript</a>
+        <a href="https://feeds.buzzsprout.com/2633998.rss" target="_blank" rel="noopener noreferrer">RSS</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <article class="episode-page">
-      <header class="episode-hero">
-        <div class="shell episode-hero-inner">
-          <p class="episode-number">Season One · Episode One</p>
+    <section class="hero">
+      <div class="shell">
+        <p class="episode-label">Season One · Episode Two</p>
+        <h1>The Story of Coins</h1>
+        <p class="subtitle">Trust Moves with Us</p>
 
-          <h1 class="episode-page-title">
-            Money:
-            <span>Humanity's Greatest Agreement</span>
-          </h1>
+        <p class="dek">
+          Before paper money, banks, or digital payments, there was a simpler
+          problem: how do you trust someone you have never met? This episode
+          travels to ancient Lydia, where a small piece of stamped metal allowed
+          trust to move beyond personal reputation—and quietly changed the way
+          civilization traded, governed, and grew.
+        </p>
 
-          <p class="episode-deck">
-            Before coins, banknotes, stock markets, or numbers glowing on a
-            screen, people faced a more basic problem: how do we exchange value
-            with people who may not want what we have?
-          </p>
+        <div class="player-card">
+          <!--
+            REPLACE THE BLOCK BELOW WITH YOUR BUZZSPROUT EPISODE EMBED CODE.
 
-          <div class="episode-meta">
-            <span>Written and narrated by Bryan Yach, CFP®</span>
-            <span>Money's the Matter</span>
+            In Buzzsprout:
+            Episode 2 → Share → Embed This Episode → Copy Embed Code
+
+            Paste the iframe/script here, replacing .player-placeholder.
+          -->
+          <div class="player-placeholder">
+            <strong>Episode player goes here.</strong><br />
+            Replace this box with the Episode 2 embed code copied from Buzzsprout.
           </div>
-        </div>
-      </header>
 
-      <section class="episode-feature">
-        <div class="shell">
-          <div class="episode-feature-art">
-            <img
-              src="/mtm-logo.png"
-              alt="Money's the Matter podcast artwork"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section class="episode-listen">
-        <div class="shell">
-          <div class="episode-listen-card">
-            <div>
-              <p class="section-kicker">Listen to the episode</p>
-
-              <h2>Choose your podcast app.</h2>
-            </div>
-
-            <div
-              class="episode-platforms"
-              aria-label="Listen to Episode One"
-            >
-              <a
-                href="https://podcasts.apple.com/podcast/id6797090925"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Apple Podcasts
-              </a>
-
-              <a
-                href="https://open.spotify.com/show/033ZMVAOk3TJEkOdaIOEJC"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Spotify
-              </a>
-
-              <a
-                href="https://music.amazon.com/podcasts/750e1dbd-d1ed-47b5-9a2e-bfb49ba24e11"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Amazon Music
-              </a>
-
-              <a
-                href="https://youtube.com/@moneysthematter"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                YouTube
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div class="shell episode-content-layout">
-        <aside class="episode-sidebar">
-          <div class="episode-sidebar-card">
-            <p class="section-kicker">In this episode</p>
-
-            <nav aria-label="Episode sections">
-              <a href="#story">The Story</a>
-              <a href="#transcript">Transcript</a>
-              <a href="#sources">Sources</a>
-            </nav>
-          </div>
-        </aside>
-
-        <div class="episode-article">
-          <section class="episode-section" id="story">
-  <p class="section-kicker">The story</p>
-
-  <h2>Why does money work at all?</h2>
-
-  <p class="episode-lead">
-    Before there were coins, there was memory. Before there were banks,
-    there was trust.
-  </p>
-
-  <p>
-    Money is so deeply woven into everyday life that it can seem almost
-    natural. We earn it, save it, spend it, invest it, fear losing it, and
-    rarely stop to ask why any of it works.
-  </p>
-
-  <p>
-    This episode begins in an ancient village, with a fisherman trying to
-    trade his catch for something his family needs. From that ordinary
-    frustration, the story moves toward Mesopotamian cities, clay tablets,
-    recorded obligations, and the shared trust that made exchange possible
-    between strangers.
-  </p>
-
-  <p>
-    It is a story about money before coins—and about the agreement beneath
-    every form money has taken since.
-  </p>
-
-  <blockquote>
-    Money was brought into the world because cooperation had outgrown
-    memory.
-  </blockquote>
-</section>
-
-         <section class="episode-section" id="transcript">
-  <p class="section-kicker">Episode transcript</p>
-
-  <h2>Money: Humanity's Greatest Agreement</h2>
-
-  <p class="transcript-note">
-    This transcript has been lightly edited for clarity and readability.
-  </p>
-
-  <h3>An Ordinary Day, 5,000 Years Ago</h3>
-
-  <p>
-    It’s 5,000 years ago.
-  </p>
-
-  <p>
-    There’s no stock market. No SEC. No English language for that matter.
-    The words I’m saying would mean nothing at this point in human history,
-    just remnants of familiarity in an otherwise alien world.
-  </p>
-
-  <p>
-    A village is already stirring.
-  </p>
-
-  <p>
-    Somewhere nearby, someone is grinding grain against stone. A dog barks,
-    hoping to ward off an unwanted predator. Smoke curls from the first
-    cooking fires as another ordinary day begins.
-  </p>
-
-  <p>
-    You spend the morning standing knee-deep in a river, casting a woven net
-    into the current. By midday, you’ve caught enough fish to feed your
-    family, with a few left over to trade.
-  </p>
-
-  <p>
-    Across the village, someone else has spent the day baking bread. Another
-    is shaping clay into jars. Another has repaired tools.
-  </p>
-
-  <p>
-    Everyone has work. Everyone has created something another person might
-    need.
-  </p>
-
-  <p>
-    But they might not need it then.
-  </p>
-
-  <h3>The Problem With Exchange</h3>
-
-  <p>
-    When the sun begins to fall, something curious happens.
-  </p>
-
-  <p>
-    You walk over to the baker, fish in hand, hoping to trade. He smiles
-    politely. He has already caught a fish that morning.
-  </p>
-
-  <p>
-    Tomorrow, perhaps.
-  </p>
-
-  <p>
-    You continue through the village, looking for someone who needs what you
-    possess so that you can get something in return.
-  </p>
-
-  <p>
-    By the end of the afternoon, you’ve spoken to half a dozen people.
-    They’re all kind. They’re all willing to trade.
-  </p>
-
-  <p>
-    Just not today.
-  </p>
-
-  <p>
-    For all the effort you’ve put into your work, you’re carrying home
-    exactly what you started with.
-  </p>
-
-  <p>
-    Maybe you can repurpose the fish. Make a stew. Turn it into fertilizer
-    for the crops. You have to have a plan B.
-  </p>
-
-  <p>
-    It isn’t a failure of hard work. It isn’t greed. It isn’t dishonesty.
-  </p>
-
-  <p>
-    It’s a problem every civilization eventually encounters.
-  </p>
-
-  <blockquote>
-    Human beings are remarkably good at creating value. We have been far
-    less efficient at agreeing on how to exchange it.
-  </blockquote>
-
-  <p>
-    That simple frustration—two people wanting different things at different
-    times—would quietly reshape human history.
-  </p>
-
-  <p>
-    Long before banks towered over marble corners, before traders shouted
-    across exchange floors, before retirement accounts, stock markets,
-    credit cards, or the quiet tap of a phone against a payment terminal,
-    there was simply this moment:
-  </p>
-
-  <p>
-    Two honest people trying to make a fair trade and discovering that
-    goodwill alone wasn’t enough.
-  </p>
-
-  <h3>When Cooperation Outgrew Memory</h3>
-
-  <p>
-    Money was brought into the world because cooperation had outgrown
-    memory.
-  </p>
-
-  <p>
-    People needed a convenient way to exchange goods and services.
-  </p>
-
-  <p>
-    As villages became towns and towns became cities, people began trading
-    with strangers. A handshake wasn’t enough anymore. Neither was a good
-    reputation.
-  </p>
-
-  <p>
-    You couldn’t know everybody. You couldn’t trust everybody. You couldn’t
-    remember every favor.
-  </p>
-
-  <p>
-    The little mental ledger that had worked so well in a village of a few
-    hundred people simply broke under the weight of thousands.
-  </p>
-
-  <p>
-    Humans have an incredible capacity to come together in pursuit of one
-    idea—to gather in groups of thousands and millions.
-  </p>
-
-  <p>
-    That’s what makes humans unique. That’s what makes us different from the
-    rest of the animal kingdom.
-  </p>
-
-  <p>
-    History often remembers kings, wars, and inventions. It spends less time
-    remembering ordinary frustrations.
-  </p>
-
-  <p>
-    But civilizations have always been built on solving surprisingly
-    ordinary problems.
-  </p>
-
-  <p>
-    How do you store grain through the winter?
-  </p>
-
-  <p>
-    How do you cross a river?
-  </p>
-
-  <p>
-    How do you tell time?
-  </p>
-
-  <p>
-    And perhaps the strangest question of all: How do you persuade someone
-    you’ve never met to accept something that has almost no value by itself
-    in exchange for something they spent days, weeks, or years creating?
-  </p>
-
-  <p>
-    That’s the question I’d like to explore with you.
-  </p>
-
-  <p>
-    Because it does much more than explain finance, markets, banking, or
-    capitalism.
-  </p>
-
-  <p>
-    It explains us.
-  </p>
-
-  <p>
-    It explains humanity.
-  </p>
-
-  <h3>Between Two Rivers</h3>
-
-  <p>
-    The answer wouldn’t be found in that little village.
-  </p>
-
-  <p>
-    It would emerge hundreds of miles away, between two rivers that flooded
-    every spring and nourished one of humanity’s first great civilizations.
-  </p>
-
-  <p>
-    We call it Mesopotamia today, though the people who lived there had no
-    idea they were standing at the beginning of a story that would
-    eventually connect nearly every person on Earth.
-  </p>
-
-  <p>
-    Villages had now become cities. Cities had become something entirely
-    new.
-  </p>
-
-  <p>
-    Tens of thousands of people lived within the same walls.
-  </p>
-
-  <p>
-    Farmers arrived each morning with barley piled high on wooden carts.
-    Shepherds drove flocks through crowded streets. Potters stacked freshly
-    fired jars outside their workshops.
-  </p>
-
-  <p>
-    Boats drifted along the Euphrates carrying timber, copper, wool, and
-    stories from places most people would never see.
-  </p>
-
-  <p>
-    Prosperity had brought a new problem.
-  </p>
-
-  <p>
-    The world had become too complicated for memory alone.
-  </p>
-
-  <h3>The Scribe and the Clay</h3>
-
-  <p>
-    Somewhere inside one of those cities, a young scribe sat cross-legged on
-    the floor of a temple.
-  </p>
-
-  <p>
-    In front of him rested a lump of wet clay. In his hand was a sharpened
-    reed.
-  </p>
-
-  <p>
-    One careful mark at a time, he pressed tiny wedges into the clay.
-  </p>
-
-  <p>
-    Five sacks of barley delivered.
-  </p>
-
-  <p>
-    Three still owed.
-  </p>
-
-  <p>
-    Two received.
-  </p>
-
-  <p>
-    It isn’t exactly the sort of thing history celebrates. No statues would
-    ever be built in his honor.
-  </p>
-
-  <p>
-    He wasn’t trying to invent accounting.
-  </p>
-
-  <p>
-    He was simply trying to remember.
-  </p>
-
-  <p>
-    I’ve always found that fascinating.
-  </p>
-
-  <p>
-    So many of humanity’s greatest inventions weren’t born from flashes of
-    genius. They were born because we kept running into the same ordinary
-    frustrations.
-  </p>
-
-  <p>
-    Memories fade. Conversations are forgotten. Promises become difficult
-    to keep once the people making them no longer live in the same village.
-  </p>
-
-  <p>
-    The larger our world became, the more desperately we needed ways to
-    preserve trust beyond a handshake.
-  </p>
-
-  <p>
-    Writing helped us remember stories.
-  </p>
-
-  <p>
-    Maps helped us remember places.
-  </p>
-
-  <p>
-    Calendars helped us remember time.
-  </p>
-
-  <p>
-    And slowly, almost without anyone noticing, systems began to emerge that
-    helped people remember value and wealth.
-  </p>
-
-  <h3>Money Before Coins</h3>
-
-  <p>
-    Long before coins rattled in leather pouches or paper money passed from
-    one hand to another, temples and merchants were already recording
-    obligations in grain, livestock, and measured weights of silver.
-  </p>
-
-  <p>
-    What mattered wasn’t the object itself.
-  </p>
-
-  <p>
-    It was that people agreed on what it represented—that there was some
-    kind of accountability behind it.
-  </p>
-
-  <p>
-    That’s one of the biggest misconceptions about money.
-  </p>
-
-  <p>
-    We often imagine it beginning with coins because coins are tangible.
-    You can hold them. You can hear them strike a table.
-  </p>
-
-  <p>
-    But the first forms of money weren’t really objects at all.
-  </p>
-
-  <p>
-    They were relationships.
-  </p>
-
-  <p>
-    They were records.
-  </p>
-
-  <p>
-    They were what we might now call contracts.
-  </p>
-
-  <p>
-    They were promises written into clay instead of carried in someone’s
-    memory.
-  </p>
-
-  <h3>Money as Information</h3>
-
-  <p>
-    Once I realized that, I stopped thinking of money as something you put
-    in your pocket.
-  </p>
-
-  <p>
-    I started thinking of it as information.
-  </p>
-
-  <p>
-    Information about who created value.
-  </p>
-
-  <p>
-    Information about who exchanged it.
-  </p>
-
-  <p>
-    Information about promises made today that would be honored tomorrow.
-  </p>
-
-  <p>
-    That changes the story entirely.
-  </p>
-
-  <blockquote>
-    If money is information, then the history of money is really the history
-    of how human beings learned to trust people they would never meet.
-  </blockquote>
-
-  <p>
-    And that, I think, is where the story starts to become extraordinary.
-  </p>
-
-  <p>
-    From there, we can follow money as it changes shape again and again.
-  </p>
-
-  <p>
-    Measured barley becomes weighed silver.
-  </p>
-
-  <p>
-    Weighed silver becomes stamped coins.
-  </p>
-
-  <p>
-    Coins become paper.
-  </p>
-
-  <p>
-    Paper becomes plastic.
-  </p>
-
-  <p>
-    And now, increasingly, money becomes nothing more than numbers moving
-    silently across the world at the speed of light through silicon.
-  </p>
-
-  <p>
-    The forms keep changing.
-  </p>
-
-  <p>
-    The agreement remains remarkably familiar.
-  </p>
-
-  <p>
-    The dollar sign is a symbol.
-  </p>
-
-  <p>
-    People getting behind that symbol is what creates society. That’s what
-    creates economies.
-  </p>
-
-  <p>
-    Thanks for joining me.
-  </p>
-
-  <p>
-    I’m Bryan.
-  </p>
-
-  <p>
-    This is <em>Money’s the Matter</em>.
-  </p>
-</section>
-
-          <section class="episode-section" id="sources">
-            <p class="section-kicker">Sources and further reading</p>
-
-            <h2>Explore the ideas behind the episode.</h2>
-
-            <div class="sources-list">
-              <article>
-                <h3>The Ascent of Money</h3>
-                <p>Niall Ferguson</p>
-              </article>
-
-              <article>
-                <h3>Debt: The First 5,000 Years</h3>
-                <p>David Graeber</p>
-              </article>
-
-              <article>
-                <h3>Money: The True Story of a Made-Up Thing</h3>
-                <p>Jacob Goldstein</p>
-              </article>
-            </div>
-          </section>
-
-          <nav class="episode-navigation" aria-label="Episode navigation">
-            <a href="/episodes/">
-              <span>All episodes</span>
-              <strong>Return to the episode archive</strong>
+          <div class="platform-grid" aria-label="Listen to Money's the Matter">
+            <a class="platform" href="https://podcasts.apple.com/podcast/id6797090925" target="_blank" rel="noopener noreferrer">
+              <img src="https://cdn.simpleicons.org/applepodcasts/A855F7" alt="" />
+              Apple Podcasts
             </a>
-          </nav>
+            <a class="platform" href="https://open.spotify.com/show/033ZMVAOk3TJEkOdaIOEJC" target="_blank" rel="noopener noreferrer">
+              <img src="https://cdn.simpleicons.org/spotify/1ED760" alt="" />
+              Spotify
+            </a>
+            <a class="platform" href="https://music.amazon.com/podcasts/750e1dbd-d1ed-47b5-9a2e-bfb49ba24e11" target="_blank" rel="noopener noreferrer">
+              <img src="https://cdn.simpleicons.org/amazonmusic/25D1DA" alt="" />
+              Amazon Music
+            </a>
+            <a class="platform" href="https://youtube.com/@moneysthematter" target="_blank" rel="noopener noreferrer">
+              <img src="https://cdn.simpleicons.org/youtube/FF0000" alt="" />
+              YouTube
+            </a>
+          </div>
         </div>
       </div>
-    </article>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <h2>About this episode</h2>
+        <p class="summary">
+          Coinage did more than make trade convenient. A ruler's mark shifted
+          the burden of trust away from the individual merchant and toward an
+          institution. That promise made commerce easier—but it also gave
+          governments a new way to project authority, collect taxes, manipulate
+          currency, and shape the meaning of money itself.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="transcript">
+      <div class="shell transcript">
+        <h2>Transcript</h2>
+
+        <div class="notice">
+          This transcript has been lightly formatted for readability. The source
+          export contains omissions in part of the opening and several incomplete
+          phrases; those areas are marked rather than silently reconstructed.
+        </div>
+
+        <p>This is Money&#x27;s the Matter. I&#x27;m Bryan Yach.</p>
+<p>There&#x27;s no surviving record of the first person who accepted a coin. They didn&#x27;t write a diary. Nobody wrote home after a long day to say something extraordinary happened in the market today. It was likely a moment less than extraordinary.</p>
+<p>[Piano music and atmospheric market ambience.]</p>
+<p>[The supplied transcript omits part of the opening narration between approximately 00:00:33 and 00:02:24.]</p>
+<p>...to agree upon what they need at the exact same time. Even when two people finally strike a bargain, the questions aren&#x27;t over.</p>
+<p>A merchant reaches into a leather pouch and produces a lump of silver. The seller studies it carefully before reaching for a scale. Small bronze weights are placed one at a time on opposite sides until the balance settles. They must agree on the weight, but weight tells us only part of the story. Is the silver pure? Has someone mixed cheaper metals into it? You could have ten good trades and one ruins...</p>
+<p>And this is the era in human history where strangers are becoming more and more common. Trade is expanding beyond villages. Roads now connect cities that have never known one another. Ships cross the sea carrying goods farther than stories can travel. Your reputation may mean everything where you were born, but it means nothing a hundred miles away. Commerce has outgrown memory.</p>
+<p>Then something changes. A merchant reaches into another pouch. Instead of an irregular lump of silver, he places a small piece of stamped metal on the table. No one reaches for the scale. No one tests its purity. No one asks where it came from or what it&#x27;s made of. They only look at the mark of a lion. Not just an animal. A promise.</p>
+<p>Someone with authority has already weighed this. Someone has already tested it. Somebody with power is willing to place their reputation behind it. In that instant, the conversation changes. Not because the metal is any different than what it was before, but because the trust is. The understanding is there. For the first time in human history, trust no longer has to travel with the merchant. It travels with the coin.</p>
+<p>The first coins didn&#x27;t look particularly extraordinary. They weren&#x27;t perfectly round like the coins in your pocket today. They were irregular, almost crude by modern standards, struck by hand from a naturally occurring alloy called electrum, a mixture of gold and silver found in rivers surrounding the Lydian capital of Sardis.</p>
+<p>If you stumbled across this without knowing its history, you might mistake it for an oddly shaped piece of jewelry. The value wasn&#x27;t in its beauty. It was the story that it told.</p>
+<p>Centuries later, the symbolism of a coin would become so powerful that it appears in one of history&#x27;s most famous conversations. When the Pharisees tried to trap Jesus with a question about paying taxes to Rome, he asked to see the coin. “Whose image is this?” he asked. “Caesar&#x27;s.” Then render unto Caesar what is Caesar&#x27;s, and unto God what is God&#x27;s.</p>
+<p>The ruler whose symbol appeared on the coin was making a promise, but also making a claim. That relationship between money and government has never disappeared. Presidents appear on money. Authorities appear on money.</p>
+<p>There&#x27;s another lesson in those early coins as well. Once people trusted the stamp, rulers discovered they had an extraordinary responsibility and an extraordinary temptation.</p>
+<p>Some later governments reduced the amount of gold and silver in their coins while insisting that they were worth exactly the same amount. This practice became known as debasement. It was an easy way to stretch a treasury without raising taxes, at least for a while.</p>
+<p>People eventually noticed. They always do. The history of money is filled with technological innovations, but it&#x27;s also filled with the same human qualities repeating themselves: ambition, ingenuity, greed, trust, and occasionally restraint.</p>
+<p>The first coins didn&#x27;t change us. They gave us a new tool. They gave us a new way to live. And the agreement lives on.</p>
+<p>If you placed one of those early coins beside a dollar, they wouldn&#x27;t really seem to have much in common. One is an irregular piece of electrum stamped by hand more than twenty-six centuries ago. The other is cotton and linen printed with ink, serial numbers, and security threads.</p>
+<p>Place either of them beside the balance in your banking app and the comparison becomes even stranger. One has weight. One barely does. One isn&#x27;t physical at all. And yet they&#x27;re all solving the same problem. They all have the same purpose.</p>
+<p>The purpose isn&#x27;t wealth. The purpose is trust. That&#x27;s easy to forget because modern money has become almost invisible.</p>
+<p>Most of us are paid by direct deposit. We tap a phone against a payment terminal, buy something online with a saved card number, or split dinner without ever seeing a coin or a bill. Money has become so frictionless that we rarely stop to ask what it actually is.</p>
+<p>This is something that&#x27;s been going on for 2,600 years, and now it&#x27;s being revolutionized again. Money isn&#x27;t metal. Money isn&#x27;t paper. It isn&#x27;t even the number on a screen. It&#x27;s a contract. It&#x27;s an agreement. It&#x27;s trust.</p>
+<p>That agreement began long before banks, stock markets, or central banks. It began with people discovering that a shared value and a shared symbol could be trusted more easily than a stranger&#x27;s word. The lion stamped into the Lydian coin wasn&#x27;t valuable because of the image. It was valuable because people believed what was behind it.</p>
+<p>[Music.]</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <h2>Continue listening</h2>
+
+        <div class="continue-grid">
+          <a class="continue-card" href="../money-is-a-human-story/">
+            <small>Previous episode</small>
+            <strong>Money Is a Human Story</strong>
+            <p>Humanity's Greatest Agreement</p>
+          </a>
+
+          <div class="continue-card">
+            <small>Coming next</small>
+            <strong>Paper Money</strong>
+            <p>When trust loses its weight.</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer class="site-footer">
+  <footer>
     <div class="shell footer-row">
       <span>© 2026 Money's the Matter. All rights reserved.</span>
-
-      <div class="footer-links">
-        <a href="/">Home</a>
-        <a href="/episodes/">Episodes</a>
-        <a href="/#about">About</a>
-
-        <a
-          href="https://feeds.buzzsprout.com/2633998.rss"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          RSS
-        </a>
-      </div>
+      <a href="../../">Return to the homepage</a>
     </div>
   </footer>
 </body>
