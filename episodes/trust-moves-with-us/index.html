@@ -1,78 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CKSZ8CZTVV"></script>
+
+  <!-- =====================================================
+       GOOGLE ANALYTICS
+  ====================================================== -->
+
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-CKSZ8CZTVV">
+  </script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
     gtag('js', new Date());
+
     gtag('config', 'G-CKSZ8CZTVV');
   </script>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>The Story of Coins | Trust Moves with Us | Money's the Matter</title>
+  <!-- =====================================================
+       BASIC META
+  ====================================================== -->
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    The Story of Coins | Trust Moves with Us | Money's the Matter
+  </title>
 
   <meta
     name="description"
     content="Travel to ancient Lydia and discover how the first stamped coins allowed trust to move beyond personal reputation, reshaping trade, government, and civilization."
-  />
+  >
 
   <link
     rel="canonical"
     href="https://moneysthematter.com/episodes/trust-moves-with-us/"
-  />
+  >
+
+
+  <!-- =====================================================
+       OPEN GRAPH
+  ====================================================== -->
 
   <meta
     property="og:title"
     content="The Story of Coins | Trust Moves with Us"
-  />
+  >
 
   <meta
     property="og:description"
     content="How a small piece of stamped metal allowed trust to travel farther than memory."
-  />
+  >
 
-  <meta property="og:type" content="article" />
+  <meta
+    property="og:type"
+    content="article"
+  >
 
   <meta
     property="og:url"
     content="https://moneysthematter.com/episodes/trust-moves-with-us/"
-  />
+  >
 
   <meta
     property="og:image"
-    content="https://moneysthematter.com/favicon-512x512.png"
-  />
+    content="https://moneysthematter.com/images/logo/mtm-logo.png"
+  >
 
-  <!-- ROOT-RELATIVE FAVICON PATHS -->
+
+  <!-- =====================================================
+       FAVICONS
+  ====================================================== -->
+
   <link
     rel="icon"
     type="image/png"
     sizes="32x32"
     href="/favicon-32x32.png"
-  />
+  >
 
   <link
     rel="icon"
     type="image/png"
     sizes="16x16"
     href="/favicon-16x16.png"
-  />
+  >
 
   <link
     rel="apple-touch-icon"
     href="/apple-touch-icon.png"
-  />
+  >
+
+
+  <!-- =====================================================
+       RSS
+  ====================================================== -->
 
   <link
     rel="alternate"
     type="application/rss+xml"
     title="Money's the Matter RSS Feed"
     href="https://feeds.buzzsprout.com/2633998.rss"
-  />
+  >
+
+
+  <!-- =====================================================
+       PODCAST STRUCTURED DATA
+  ====================================================== -->
 
   <script type="application/ld+json">
   {
@@ -82,11 +129,13 @@
     "episodeNumber": 2,
     "description": "How the first stamped coins allowed trust to move beyond personal reputation and reshape trade, government, and civilization.",
     "url": "https://moneysthematter.com/episodes/trust-moves-with-us/",
-    "image": "https://moneysthematter.com/favicon-512x512.png",
+    "image": "https://moneysthematter.com/images/logo/mtm-logo.png",
+
     "author": {
       "@type": "Person",
       "name": "Bryan Yach"
     },
+
     "partOfSeries": {
       "@type": "PodcastSeries",
       "name": "Money's the Matter",
@@ -95,47 +144,76 @@
   }
   </script>
 
+
+  <!-- =====================================================
+       CSS
+  ====================================================== -->
+
   <style>
+
     :root {
+
       --background: #07090d;
+
       --background-soft: #0b0f16;
-      --panel: rgba(17, 21, 29, 0.78);
+
+      --panel:
+        rgba(17, 21, 29, 0.78);
 
       --cream: #f3eadc;
+
       --cream-soft: #e4d7c4;
 
       --muted: #b8afa3;
+
       --muted-dark: #8e877d;
 
       --gold: #b98a3d;
+
       --gold-light: #d6ad65;
 
-      --border: rgba(185, 138, 61, 0.38);
-      --border-soft: rgba(243, 234, 220, 0.11);
+      --border:
+        rgba(185, 138, 61, 0.38);
 
-      --sans: Arial, Helvetica, sans-serif;
-      --serif: Georgia, "Times New Roman", serif;
+      --border-soft:
+        rgba(243, 234, 220, 0.11);
+
+      --sans:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      --serif:
+        Georgia,
+        "Times New Roman",
+        serif;
     }
+
 
     * {
       box-sizing: border-box;
     }
 
+
     html {
       scroll-behavior: smooth;
     }
 
+
     body {
+
       margin: 0;
 
       color: var(--cream);
 
       background:
+
         radial-gradient(
           circle at 50% 0%,
           rgba(32, 43, 61, 0.42),
           transparent 34%
         ),
+
         linear-gradient(
           180deg,
           #090c12 0%,
@@ -145,44 +223,71 @@
       font-family: var(--serif);
     }
 
+
     a {
       color: inherit;
     }
+
 
     img {
       max-width: 100%;
     }
 
+
     .shell {
-      width: min(1040px, calc(100% - 36px));
+
+      width:
+        min(
+          1040px,
+          calc(100% - 36px)
+        );
+
       margin: 0 auto;
     }
 
 
+
+    /* =====================================================
+       HEADER
+    ====================================================== */
+
     .site-header {
+
       position: sticky;
+
       top: 0;
+
       z-index: 20;
 
-      border-bottom: 1px solid var(--border-soft);
+      border-bottom:
+        1px solid var(--border-soft);
 
-      background: rgba(7, 9, 13, 0.9);
+      background:
+        rgba(7, 9, 13, 0.92);
 
-      backdrop-filter: blur(14px);
+      backdrop-filter:
+        blur(14px);
     }
 
+
     .nav {
-      min-height: 72px;
+
+      min-height: 76px;
 
       display: flex;
+
       align-items: center;
+
       justify-content: space-between;
 
       gap: 24px;
     }
 
+
     .brand {
+
       display: inline-flex;
+
       align-items: center;
 
       gap: 12px;
@@ -191,52 +296,87 @@
     }
 
 
+    /*
+      IMPORTANT:
+      Root-relative path used below.
+
+      If your actual full logo filename is different,
+      change ONLY the src="" line in the HTML.
+    */
+
     .brand img {
-      width: 42px;
-      height: 42px;
 
-      border-radius: 50%;
+      width: 44px;
 
-      object-fit: cover;
+      height: 44px;
+
+      object-fit: contain;
+
+      flex-shrink: 0;
     }
 
+
     .brand span {
+
+      color: var(--cream);
+
       font-size: 0.98rem;
 
-      letter-spacing: 0.08em;
+      font-weight: 600;
+
+      letter-spacing: 0.065em;
 
       text-transform: uppercase;
     }
 
+
     .nav-links {
+
       display: flex;
 
-      gap: 20px;
+      gap: 22px;
 
       font-family: var(--sans);
 
       font-size: 0.86rem;
     }
 
+
     .nav-links a {
+
       color: var(--muted);
 
       text-decoration: none;
+
+      transition:
+        color 150ms ease;
     }
 
+
     .nav-links a:hover {
+
       color: var(--cream);
     }
 
 
+
+    /* =====================================================
+       HERO
+    ====================================================== */
+
     .hero {
-      padding: 82px 0 74px;
+
+      padding:
+        82px 0 74px;
 
       text-align: center;
     }
 
+
     .episode-label {
-      margin: 0 0 18px;
+
+      margin:
+        0 0 18px;
 
       color: var(--gold-light);
 
@@ -251,34 +391,53 @@
       text-transform: uppercase;
     }
 
+
     h1 {
+
       max-width: 900px;
 
       margin: 0 auto;
 
-      font-size: clamp(2.7rem, 7vw, 5.4rem);
+      font-size:
+        clamp(
+          2.7rem,
+          7vw,
+          5.4rem
+        );
 
       font-weight: 500;
 
-      letter-spacing: -0.025em;
+      letter-spacing:
+        -0.025em;
 
       line-height: 1.02;
     }
 
+
     .subtitle {
-      margin: 20px 0 0;
+
+      margin:
+        20px 0 0;
 
       color: var(--gold-light);
 
-      font-size: clamp(1.25rem, 2.8vw, 1.8rem);
+      font-size:
+        clamp(
+          1.25rem,
+          2.8vw,
+          1.8rem
+        );
     }
 
+
     .dek {
+
       max-width: 760px;
 
-      margin: 30px auto 0;
+      margin:
+        30px auto 0;
 
-      color: var(--muted);
+      color: var(--cream-soft);
 
       font-family: var(--sans);
 
@@ -287,26 +446,62 @@
       line-height: 1.85;
     }
 
-    /* ---------------------------------------------------
-       PLAYER
-    --------------------------------------------------- */
+
+
+    /* =====================================================
+       PLAYER CARD
+    ====================================================== */
 
     .player-card {
+
       margin-top: 42px;
 
       padding: 26px;
 
-      border: 1px solid var(--border);
+      border:
+        1px solid var(--border);
 
       border-radius: 22px;
 
       background: var(--panel);
     }
 
-    .player-placeholder {
-      padding: 26px;
 
-      border: 1px dashed var(--border);
+    .episode-player {
+
+      width: 100%;
+
+      overflow: hidden;
+
+      border-radius: 15px;
+    }
+
+
+    .episode-player iframe {
+
+      display: block;
+
+      width: 100%;
+
+      max-width: 100%;
+
+      border: 0;
+    }
+
+
+    /*
+      Temporary placeholder.
+
+      Delete this DIV after inserting
+      the Buzzsprout player.
+    */
+
+    .player-placeholder {
+
+      padding: 30px 24px;
+
+      border:
+        1px dashed var(--border);
 
       border-radius: 15px;
 
@@ -317,22 +512,30 @@
       line-height: 1.65;
     }
 
-    /* ---------------------------------------------------
-       LISTEN BUTTONS
-    --------------------------------------------------- */
+
+
+    /* =====================================================
+       PODCAST PLATFORM BUTTONS
+    ====================================================== */
 
     .platform-grid {
+
       display: grid;
 
       grid-template-columns:
-        repeat(4, minmax(0, 1fr));
+        repeat(
+          4,
+          minmax(0, 1fr)
+        );
 
       gap: 12px;
 
       margin-top: 18px;
     }
 
+
     .platform {
+
       min-height: 58px;
 
       display: flex;
@@ -343,13 +546,16 @@
 
       gap: 10px;
 
-      padding: 13px 16px;
+      padding:
+        10px 16px;
 
-      border: 1px solid var(--border);
+      border:
+        1px solid var(--border);
 
       border-radius: 15px;
 
-      background: rgba(7, 9, 13, 0.5);
+      background:
+        rgba(7, 9, 13, 0.5);
 
       font-family: var(--sans);
 
@@ -365,49 +571,126 @@
         background 160ms ease;
     }
 
+
     .platform:hover {
-      transform: translateY(-2px);
 
-      border-color: var(--gold-light);
+      transform:
+        translateY(-2px);
 
-      background: rgba(185, 138, 61, 0.09);
+      border-color:
+        var(--gold-light);
+
+      background:
+        rgba(185, 138, 61, 0.09);
     }
+
 
     .platform-icon {
+
       width: 25px;
+
       height: 25px;
 
-      flex: 0 0 auto;
+      flex:
+        0 0 auto;
     }
 
-    /* Apple SVG is stored locally */
 
-    .apple-icon {
-      width: 27px;
-      height: 27px;
+
+    /* =====================================================
+       APPLE FULL BADGE
+    ====================================================== */
+
+    .platform-badge {
+
+      min-height: 58px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      padding:
+        8px 16px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 15px;
+
+      background:
+        rgba(7, 9, 13, 0.5);
+
+      text-decoration: none;
+
+      transition:
+        transform 160ms ease,
+        border-color 160ms ease,
+        background 160ms ease;
     }
 
-    /* ---------------------------------------------------
-       SECTIONS
-    --------------------------------------------------- */
+
+    .platform-badge:hover {
+
+      transform:
+        translateY(-2px);
+
+      border-color:
+        var(--gold-light);
+
+      background:
+        rgba(185, 138, 61, 0.09);
+    }
+
+
+    .platform-badge img {
+
+      display: block;
+
+      width: auto;
+
+      height: 40px;
+
+      max-width: 100%;
+    }
+
+
+
+    /* =====================================================
+       CONTENT SECTIONS
+    ====================================================== */
 
     .section {
-      padding: 78px 0;
 
-      border-top: 1px solid var(--border-soft);
+      padding:
+        78px 0;
+
+      border-top:
+        1px solid var(--border-soft);
     }
 
-    .section h2 {
-      margin: 0 0 26px;
 
-      font-size: clamp(2rem, 4.5vw, 3.5rem);
+    .section h2 {
+
+      margin:
+        0 0 26px;
+
+      font-size:
+        clamp(
+          2rem,
+          4.5vw,
+          3.5rem
+        );
 
       font-weight: 500;
 
       line-height: 1.08;
     }
 
+
     .summary {
+
       max-width: 780px;
 
       color: var(--cream-soft);
@@ -417,18 +700,24 @@
       line-height: 1.65;
     }
 
-    /* ---------------------------------------------------
+
+
+    /* =====================================================
        TRANSCRIPT
-    --------------------------------------------------- */
+    ====================================================== */
 
     .transcript {
+
       max-width: 790px;
 
       margin: 0 auto;
     }
 
+
     .transcript p {
-      margin: 0 0 1.35em;
+
+      margin:
+        0 0 1.35em;
 
       color: var(--cream-soft);
 
@@ -437,36 +726,81 @@
       line-height: 1.88;
     }
 
-    /* ---------------------------------------------------
+
+    .transcript-note {
+
+      margin-bottom: 32px;
+
+      padding:
+        16px 18px;
+
+      border-left:
+        3px solid var(--gold);
+
+      background:
+        rgba(185, 138, 61, 0.06);
+
+      color: var(--muted);
+
+      font-family: var(--sans);
+
+      font-size: 0.88rem;
+
+      line-height: 1.6;
+    }
+
+
+
+    /* =====================================================
        CONTINUE LISTENING
-    --------------------------------------------------- */
+    ====================================================== */
 
     .continue-grid {
+
       display: grid;
 
       grid-template-columns:
-        repeat(2, minmax(0, 1fr));
+        repeat(
+          2,
+          minmax(0, 1fr)
+        );
 
       gap: 18px;
     }
 
+
     .continue-card {
+
       padding: 24px;
 
-      border: 1px solid var(--border);
+      border:
+        1px solid var(--border);
 
       border-radius: 18px;
 
-      background: var(--background-soft);
+      background:
+        var(--background-soft);
 
       text-decoration: none;
+
+      transition:
+        border-color 160ms ease,
+        transform 160ms ease;
     }
+
 
     .continue-card:hover {
-      border-color: var(--gold-light);
+
+      border-color:
+        var(--gold-light);
+
+      transform:
+        translateY(-2px);
     }
 
+
     .continue-card small {
+
       display: block;
 
       margin-bottom: 9px;
@@ -475,12 +809,16 @@
 
       font-family: var(--sans);
 
-      letter-spacing: 0.12em;
+      letter-spacing:
+        0.12em;
 
-      text-transform: uppercase;
+      text-transform:
+        uppercase;
     }
 
+
     .continue-card strong {
+
       display: block;
 
       font-size: 1.3rem;
@@ -488,8 +826,11 @@
       line-height: 1.35;
     }
 
+
     .continue-card p {
-      margin: 10px 0 0;
+
+      margin:
+        10px 0 0;
 
       color: var(--muted);
 
@@ -498,14 +839,19 @@
       line-height: 1.6;
     }
 
-    /* ---------------------------------------------------
+
+
+    /* =====================================================
        FOOTER
-    --------------------------------------------------- */
+    ====================================================== */
 
     footer {
-      padding: 34px 0 44px;
 
-      border-top: 1px solid var(--border-soft);
+      padding:
+        34px 0 44px;
+
+      border-top:
+        1px solid var(--border-soft);
 
       color: var(--muted-dark);
 
@@ -514,68 +860,115 @@
       font-size: 0.82rem;
     }
 
+
     .footer-row {
+
       display: flex;
 
-      justify-content: space-between;
+      justify-content:
+        space-between;
 
       gap: 18px;
 
       flex-wrap: wrap;
     }
 
+
     .footer-row a {
+
       text-decoration: none;
     }
 
-    /* ---------------------------------------------------
-       RESPONSIVE
-    --------------------------------------------------- */
 
-    @media (max-width: 780px) {
+
+    /* =====================================================
+       MOBILE
+    ====================================================== */
+
+    @media
+    (max-width: 780px) {
+
       .nav-links {
         display: none;
       }
 
+
       .platform-grid {
+
         grid-template-columns:
-          repeat(2, minmax(0, 1fr));
+          repeat(
+            2,
+            minmax(0, 1fr)
+          );
       }
+
 
       .continue-grid {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+          1fr;
       }
+
     }
 
-    @media (max-width: 520px) {
+
+    @media
+    (max-width: 520px) {
+
       .shell {
-        width: min(100% - 24px, 1040px);
+
+        width:
+          min(
+            100% - 24px,
+            1040px
+          );
       }
+
 
       .hero {
-        padding: 54px 0 58px;
+
+        padding:
+          54px 0 58px;
       }
+
 
       .platform-grid {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+          1fr;
       }
 
+
       .player-card {
+
         padding: 16px;
       }
+
+
+      .brand span {
+
+        font-size: 0.86rem;
+      }
+
     }
+
   </style>
+
 </head>
+
+
 
 <body>
 
-  <!-- ============================================
+
+  <!-- =====================================================
        HEADER
-  ============================================= -->
+  ====================================================== -->
 
   <header class="site-header">
 
     <div class="shell nav">
+
 
       <a
         class="brand"
@@ -583,21 +976,26 @@
       >
 
         <!--
-          FIX:
-          Root-relative path.
-          No ../../ paths on nested episode pages.
+          FULL MONEY'S THE MATTER LOGO
+
+          IMPORTANT:
+          If the actual filename in
+          /images/logo/
+          differs, change ONLY this src.
         -->
 
         <img
-          src="/favicon-48x48.png"
+          src="/images/logo/mtm-logo.png"
           alt="Money's the Matter"
-        />
+        >
 
         <span>
           Money's the Matter
         </span>
 
       </a>
+
+
 
       <nav
         class="nav-links"
@@ -626,106 +1024,151 @@
 
       </nav>
 
+
     </div>
 
   </header>
 
+
+
   <main>
 
-    <!-- ============================================
+
+    <!-- =====================================================
          HERO
-    ============================================= -->
+    ====================================================== -->
 
     <section class="hero">
 
       <div class="shell">
 
+
         <p class="episode-label">
           Season One · Episode Two
         </p>
+
 
         <h1>
           The Story of Coins
         </h1>
 
+
         <p class="subtitle">
           Trust Moves with Us
         </p>
 
+
         <p class="dek">
+
           Before paper money, banks, or digital payments,
           there was a simpler problem: how do you trust
-          someone you have never met? This episode travels
-          to ancient Lydia, where a small piece of stamped
-          metal allowed trust to move beyond personal
-          reputation—and quietly changed the way
-          civilization traded, governed, and grew.
+          someone you have never met?
+
+          This episode travels to ancient Lydia, where a
+          small piece of stamped metal allowed trust to
+          move beyond personal reputation—and quietly
+          changed the way civilization traded, governed,
+          and grew.
+
         </p>
 
-        <!-- ============================================
-             PLAYER CARD
-        ============================================= -->
+
+
+        <!-- =================================================
+             PLAYER + LISTENING DESTINATIONS
+        ================================================== -->
 
         <div class="player-card">
 
-          <!--
-            BUZZSPROUT PLAYER
 
-            Replace this placeholder with:
-            Buzzsprout → Episode 2 → Share →
-            Embed This Episode
-          -->
+          <!-- ===============================================
+               BUZZSPROUT PLAYER
+          ================================================ -->
 
-          <div class="player-placeholder">
+          <div class="episode-player">
 
-            <strong>
-              Episode player goes here.
-            </strong>
 
-            <br />
+            <!--
+              DELETE THE PLACEHOLDER BELOW
+              AFTER YOU COPY YOUR BUZZSPROUT
+              EPISODE 2 EMBED CODE.
 
-            Replace this box with the Episode 2
-            embed code copied from Buzzsprout.
+              Buzzsprout:
+              Episode 2
+              → Share
+              → Embed This Episode
+              → Copy code
+
+              Paste Buzzsprout's exact embed
+              code here.
+            -->
+
+
+            <div class="player-placeholder">
+
+              <strong>
+                Episode player goes here.
+              </strong>
+
+              <br>
+
+              Replace this box with the
+              Episode 2 embed code copied
+              from Buzzsprout.
+
+            </div>
+
 
           </div>
 
-          <!-- ========================================
-               PODCAST DESTINATIONS
-          ========================================= -->
+
+
+          <!-- ===============================================
+               PODCAST SERVICES
+          ================================================ -->
 
           <div
             class="platform-grid"
             aria-label="Listen to Money's the Matter"
           >
 
-            <!-- APPLE PODCASTS -->
+
+
+            <!-- =============================================
+                 APPLE PODCASTS
+                 FULL OFFICIAL BADGE
+            ============================================== -->
 
             <a
-              class="platform"
+              class="platform-badge"
               href="https://podcasts.apple.com/podcast/id6797090925"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Listen on Apple Podcasts"
             >
 
               <img
-                class="platform-icon apple-icon"
                 src="/assets/badges/apple.svg"
-                alt=""
-              />
-
-              Apple Podcasts
+                alt="Listen on Apple Podcasts"
+              >
 
             </a>
 
 
-            <!-- SPOTIFY -->
+
+            <!-- =============================================
+                 SPOTIFY
+                 TEMPORARY ICON VERSION
+            ============================================== -->
 
             <a
               class="platform"
               href="https://open.spotify.com/show/033ZMVAOk3TJEkOdaIOEJC"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Listen on Spotify"
             >
+
 
               <svg
                 class="platform-icon"
@@ -738,34 +1181,64 @@
                   cy="12"
                   r="12"
                   fill="#1ED760"
-                />
+                >
+                </circle>
 
                 <path
-                  d="M17.4 10.9c-3.3-2-8.8-2.2-12-.9-.5.2-1-.1-1.2-.6-.2-.5.1-1 .6-1.2 3.7-1.5 9.7-1.2 13.5 1 .5.3.7.9.4 1.4-.3.4-.9.6-1.3.3zm-.1 2.9c-.2.4-.8.6-1.2.3-2.7-1.7-6.9-2.2-10.1-1.2-.5.1-.9-.1-1.1-.6-.1-.5.1-.9.6-1.1 3.7-1.1 8.3-.6 11.4 1.4.5.3.6.8.4 1.2zm-1.3 2.8c-.2.3-.6.4-1 .2-2.4-1.5-5.5-1.8-9.1-1-.4.1-.8-.2-.9-.6-.1-.4.2-.8.6-.9 4-.9 7.5-.5 10.2 1.2.3.2.4.7.2 1.1z"
+                  d="
+                    M17.4 10.9
+                    c-3.3-2-8.8-2.2-12-.9
+                    c-.5.2-1-.1-1.2-.6
+                    c-.2-.5.1-1 .6-1.2
+                    c3.7-1.5 9.7-1.2 13.5 1
+                    c.5.3.7.9.4 1.4
+                    c-.3.4-.9.6-1.3.3
+
+                    zm-.1 2.9
+                    c-.2.4-.8.6-1.2.3
+                    c-2.7-1.7-6.9-2.2-10.1-1.2
+                    c-.5.1-.9-.1-1.1-.6
+                    c-.1-.5.1-.9.6-1.1
+                    c3.7-1.1 8.3-.6 11.4 1.4
+                    c.5.3.6.8.4 1.2
+
+                    zm-1.3 2.8
+                    c-.2.3-.6.4-1 .2
+                    c-2.4-1.5-5.5-1.8-9.1-1
+                    c-.4.1-.8-.2-.9-.6
+                    c-.1-.4.2-.8.6-.9
+                    c4-.9 7.5-.5 10.2 1.2
+                    c.3.2.4.7.2 1.1
+                  "
                   fill="#000000"
-                />
+                >
+                </path>
 
               </svg>
 
-              Spotify
+
+              <span>
+                Spotify
+              </span>
+
 
             </a>
 
 
-            <!-- AMAZON MUSIC -->
+
+            <!-- =============================================
+                 AMAZON MUSIC
+                 TEMPORARY ICON VERSION
+            ============================================== -->
 
             <a
               class="platform"
               href="https://music.amazon.com/podcasts/750e1dbd-d1ed-47b5-9a2e-bfb49ba24e11"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Listen on Amazon Music"
             >
 
-              <!--
-                Embedded SVG.
-                No external image URL,
-                so this cannot become a broken image.
-              -->
 
               <svg
                 class="platform-icon"
@@ -778,24 +1251,36 @@
                   height="32"
                   rx="7"
                   fill="#25D1DA"
-                />
+                >
+                </rect>
 
                 <path
-                  d="M9 18.5c4.6 3.1 10.5 3.1 15 0"
+                  d="
+                    M9 18.5
+                    c4.6 3.1
+                    10.5 3.1
+                    15 0
+                  "
                   fill="none"
                   stroke="#111827"
                   stroke-width="2"
                   stroke-linecap="round"
-                />
+                >
+                </path>
 
                 <path
-                  d="M21.4 20.3l2.9-1.9-.6 3.4"
+                  d="
+                    M21.4 20.3
+                    l2.9-1.9
+                    -.6 3.4
+                  "
                   fill="none"
                   stroke="#111827"
                   stroke-width="1.6"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                />
+                >
+                </path>
 
                 <text
                   x="16"
@@ -811,19 +1296,28 @@
 
               </svg>
 
-              Amazon Music
+
+              <span>
+                Amazon Music
+              </span>
+
 
             </a>
 
 
-            <!-- YOUTUBE -->
+
+            <!-- =============================================
+                 YOUTUBE
+            ============================================== -->
 
             <a
               class="platform"
               href="https://www.youtube.com/@moneysthematter"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Watch Money's the Matter on YouTube"
             >
+
 
               <svg
                 class="platform-icon"
@@ -838,58 +1332,77 @@
                   height="20"
                   rx="6"
                   fill="#FF0000"
-                />
+                >
+                </rect>
 
                 <polygon
                   points="13,11 22,16 13,21"
                   fill="#ffffff"
-                />
+                >
+                </polygon>
 
               </svg>
 
-              YouTube
+
+              <span>
+                YouTube
+              </span>
+
 
             </a>
 
+
           </div>
 
+
         </div>
+
 
       </div>
 
     </section>
 
 
-    <!-- ============================================
-         ABOUT
-    ============================================= -->
+
+    <!-- =====================================================
+         ABOUT THIS EPISODE
+    ====================================================== -->
 
     <section class="section">
 
       <div class="shell">
 
+
         <h2>
           About this episode
         </h2>
 
+
         <p class="summary">
+
           Coinage did more than make trade convenient.
-          A ruler's mark shifted the burden of trust away
-          from the individual merchant and toward an
-          institution. That promise made commerce easier,
-          but it also gave governments a new way to project
-          authority, manipulate currency, and shape the
-          meaning of money itself.
+
+          A ruler's mark shifted the burden of trust
+          away from the individual merchant and toward
+          an institution.
+
+          That promise made commerce easier, but it also
+          gave governments a new way to project authority,
+          manipulate currency, and shape the meaning of
+          money itself.
+
         </p>
+
 
       </div>
 
     </section>
 
 
-    <!-- ============================================
+
+    <!-- =====================================================
          TRANSCRIPT
-    ============================================= -->
+    ====================================================== -->
 
     <section
       class="section"
@@ -898,100 +1411,373 @@
 
       <div class="shell transcript">
 
+
         <h2>
           Transcript
         </h2>
 
-        <!--
-          Paste the full Episode 2 transcript below.
-          Keep each paragraph inside its own <p> tag.
-        -->
 
         <p>
-          There's no surviving record of the first person
-          who accepted a coin.
+
+          There's no surviving record of the first
+          person who accepted a coin.
+
         </p>
 
+
         <p>
+
           They didn't write a diary. Nobody wrote home
           after a long day to say something extraordinary
-          happened in the market today. It was likely a
-          moment less than extraordinary.
+          happened in the market today. It was likely
+          a moment less than extraordinary.
+
         </p>
 
+
         <p>
+
           Even when two people finally strike a bargain,
-          the questions aren't over. A merchant reaches
-          into a leather pouch and produces a lump of
-          silver. The seller studies it carefully before
+          the questions aren't over.
+
+          A merchant reaches into a leather pouch and
+          produces a lump of silver.
+
+          The seller studies it carefully before
           reaching for a scale.
+
         </p>
 
+
         <p>
+
           Small bronze weights are placed one at a time
           on opposite sides until the balance settles.
-          They must agree on the weight, but weight tells
-          us only part of the story. Is the silver pure?
+
+          They must agree on the weight, but weight
+          tells us only part of the story.
+
+          Is the silver pure?
+
           Has someone mixed cheaper metals into it?
+
         </p>
 
+
         <p>
+
           And this is the era in human history where
           strangers are becoming more and more common.
-          Trade is expanding beyond villages. Roads now
-          connect cities that have never known one another.
-          Ships cross the sea carrying goods farther than
-          stories can travel. Your reputation may mean
-          everything where you were born, but it means
-          nothing a hundred miles away.
+
+          Trade is expanding beyond villages.
+
+          Roads now connect cities that have never
+          known one another.
+
+          Ships cross the sea carrying goods farther
+          than stories can travel.
+
+          Your reputation may mean everything where
+          you were born, but it means nothing a hundred
+          miles away.
+
           Commerce has outgrown memory.
+
         </p>
 
+
         <p>
-          Then something changes. A merchant reaches into
-          another pouch. Instead of an irregular lump of
-          silver, he places a small piece of stamped metal
-          on the table. No one reaches for the scale.
-          No one tests its purity. No one asks where it
-          came from or what it's made of. They only look
-          at the mark of a lion. Not just an animal.
+
+          Then something changes.
+
+          A merchant reaches into another pouch.
+
+          Instead of an irregular lump of silver,
+          he places a small piece of stamped metal
+          on the table.
+
+          No one reaches for the scale.
+
+          No one tests its purity.
+
+          No one asks where it came from or what
+          it's made of.
+
+          They only look at the mark of a lion.
+
+          Not just an animal.
+
           A promise.
+
         </p>
 
+
         <p>
-          Someone with authority has already weighed this.
-          Someone has already tested it. Somebody with power
-          is willing to place their reputation behind it.
+
+          Someone with authority has already weighed
+          this.
+
+          Someone has already tested it.
+
+          Somebody with power is willing to place
+          their reputation behind it.
+
           In that instant, the conversation changes.
+
           Not because the metal is any different than
           what it was before, but because the trust is.
+
         </p>
+
 
         <p>
-          Trust no longer has to travel with the merchant.
+
+          Trust no longer has to travel with
+          the merchant.
+
           It travels with the coin.
+
         </p>
 
-        <!-- Continue transcript here -->
+
+        <p>
+
+          The first coins didn't look particularly
+          extraordinary.
+
+          They weren't perfectly round like the coins
+          in your pocket today.
+
+          They were irregular, almost crude by modern
+          standards, struck by hand from a naturally
+          occurring alloy called electrum, a mixture
+          of gold and silver found in rivers surrounding
+          the Lydian capital of Sardis.
+
+        </p>
+
+
+        <p>
+
+          If you stumbled across one without knowing
+          its history, you might mistake it for an oddly
+          shaped piece of jewelry.
+
+          The value wasn't in its beauty.
+
+          It was the story that it told.
+
+        </p>
+
+
+        <p>
+
+          Centuries later, the symbolism of a coin
+          would become so powerful that it appears in
+          one of history's most famous conversations.
+
+          When the Pharisees tried to trap Jesus with
+          a question about paying taxes to Rome, he
+          asked to see the coin.
+
+          Whose image is this?
+
+          Caesar's.
+
+          Then render unto Caesar what is Caesar's,
+          and unto God what is God's.
+
+        </p>
+
+
+        <p>
+
+          The ruler whose symbol appeared on the coin
+          was making a promise, but also making a claim.
+
+          That relationship between money and government
+          has never disappeared.
+
+        </p>
+
+
+        <p>
+
+          There's another lesson in those early coins
+          as well.
+
+          Once people trusted the stamp, rulers
+          discovered they had an extraordinary
+          responsibility and an extraordinary temptation.
+
+        </p>
+
+
+        <p>
+
+          Some later governments reduced the amount
+          of gold and silver in their coins while
+          insisting they were worth exactly the same
+          amount.
+
+          This practice became known as debasement.
+
+          It was an easy way to stretch a treasury
+          without raising taxes, at least for a while.
+
+        </p>
+
+
+        <p>
+
+          People eventually noticed.
+
+          They always do.
+
+          The history of money is filled with
+          technological innovations, but it's also
+          filled with the same human qualities
+          repeating themselves:
+
+          ambition, ingenuity, greed, trust,
+          and occasionally restraint.
+
+        </p>
+
+
+        <p>
+
+          The first coins didn't change us.
+
+          They gave us a new tool.
+
+          They gave us a new way to live.
+
+          And the agreement lives on.
+
+        </p>
+
+
+        <p>
+
+          If you placed one of those early coins
+          beside a dollar, they wouldn't really seem
+          to have much in common.
+
+          One is an irregular piece of electrum
+          stamped by hand more than twenty-six
+          centuries ago.
+
+          The other is cotton and linen printed
+          with ink, serial numbers, and security
+          threads.
+
+        </p>
+
+
+        <p>
+
+          Place either of them beside the balance
+          in your banking app and the comparison
+          becomes even stranger.
+
+          One has weight.
+
+          One barely does.
+
+          One isn't physical at all.
+
+          And yet they're all solving the same problem.
+
+          They all have the same purpose.
+
+        </p>
+
+
+        <p>
+
+          The purpose isn't wealth.
+
+          The purpose is trust.
+
+          That's easy to forget because modern money
+          has become almost invisible.
+
+        </p>
+
+
+        <p>
+
+          Most of us are paid by direct deposit.
+
+          We tap a phone against a payment terminal,
+          buy something online with a saved card number,
+          or split dinner without ever seeing a coin
+          or a bill.
+
+          Money has become so frictionless that we
+          rarely stop to ask what it actually is.
+
+        </p>
+
+
+        <p>
+
+          Money isn't metal.
+
+          Money isn't paper.
+
+          It isn't even the number on a screen.
+
+          It's a contract.
+
+          It's an agreement.
+
+          It's trust.
+
+        </p>
+
+
+        <p>
+
+          That agreement began long before banks,
+          stock markets, or central banks.
+
+          It began with people discovering that a
+          shared value and a shared symbol could be
+          trusted more easily than a stranger's word.
+
+          The lion stamped into the Lydian coin wasn't
+          valuable because of the image.
+
+          It was valuable because people believed
+          what was behind it.
+
+        </p>
+
 
       </div>
 
     </section>
 
 
-    <!-- ============================================
+
+    <!-- =====================================================
          CONTINUE LISTENING
-    ============================================= -->
+    ====================================================== -->
 
     <section class="section">
 
       <div class="shell">
 
+
         <h2>
           Continue listening
         </h2>
 
+
         <div class="continue-grid">
+
 
           <a
             class="continue-card"
@@ -1013,6 +1799,7 @@
           </a>
 
 
+
           <div class="continue-card">
 
             <small>
@@ -1029,35 +1816,44 @@
 
           </div>
 
+
         </div>
+
 
       </div>
 
     </section>
 
+
   </main>
 
 
-  <!-- ============================================
+
+  <!-- =====================================================
        FOOTER
-  ============================================= -->
+  ====================================================== -->
 
   <footer>
 
     <div class="shell footer-row">
+
 
       <span>
         © 2026 Money's the Matter.
         All rights reserved.
       </span>
 
+
       <a href="/">
         Return to the homepage
       </a>
+
 
     </div>
 
   </footer>
 
+
 </body>
+
 </html>

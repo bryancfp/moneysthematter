@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CKSZ8CZTVV"></script>
+
+  <!-- =====================================================
+       GOOGLE ANALYTICS
+  ====================================================== -->
+
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-CKSZ8CZTVV">
+  </script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -14,261 +23,736 @@
     gtag("config", "G-CKSZ8CZTVV");
   </script>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Episodes | Money's the Matter</title>
+  <!-- =====================================================
+       BASIC META
+  ====================================================== -->
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Episodes | Money's the Matter
+  </title>
 
   <meta
     name="description"
-    content="Explore every episode of Money's the Matter, a narrative podcast about money, history, psychology, and the ideas that still shape us."
-  />
+    content="Explore every episode of Money's the Matter, a narrative podcast about money, history, psychology, economics, and the ideas that still shape us."
+  >
 
-  <link rel="canonical" href="https://moneysthematter.com/episodes/" />
+  <link
+    rel="canonical"
+    href="https://moneysthematter.com/episodes/"
+  >
 
-  <meta property="og:title" content="Episodes | Money's the Matter" />
+
+  <!-- =====================================================
+       OPEN GRAPH
+  ====================================================== -->
+
+  <meta
+    property="og:title"
+    content="Episodes | Money's the Matter"
+  >
 
   <meta
     property="og:description"
-    content="Begin with the trailer, then follow the story of money from its earliest human agreements."
-  />
+    content="Begin with the trailer and follow Money's the Matter through the history, psychology, and human stories behind money."
+  >
 
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://moneysthematter.com/episodes/" />
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:url"
+    content="https://moneysthematter.com/episodes/"
+  >
 
   <meta
     property="og:image"
     content="https://moneysthematter.com/images/logo/mtm-logo.png"
-  />
+  >
 
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Episodes | Money's the Matter" />
 
-  <meta
-    name="twitter:description"
-    content="Begin with the trailer, then follow the story of money from its earliest human agreements."
-  />
+  <!-- =====================================================
+       FAVICONS
+  ====================================================== -->
 
-  <meta
-    name="twitter:image"
-    content="https://moneysthematter.com/images/logo/mtm-logo.png"
-  />
-
-  <!-- Favicons -->
-  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link
+    rel="icon"
+    href="/favicon.ico"
+    sizes="any"
+  >
 
   <link
     rel="icon"
     type="image/png"
     sizes="32x32"
     href="/favicon-32x32.png"
-  />
+  >
 
   <link
     rel="icon"
     type="image/png"
     sizes="16x16"
     href="/favicon-16x16.png"
-  />
+  >
 
   <link
     rel="apple-touch-icon"
     sizes="180x180"
     href="/apple-touch-icon.png"
-  />
+  >
 
-  <link rel="manifest" href="/site.webmanifest" />
+  <link
+    rel="manifest"
+    href="/site.webmanifest"
+  >
 
-  <meta name="theme-color" content="#0b2239" />
-  <meta name="apple-mobile-web-app-title" content="Money's the Matter" />
+  <meta
+    name="theme-color"
+    content="#07090d"
+  >
+
+
+  <!-- =====================================================
+       RSS
+  ====================================================== -->
 
   <link
     rel="alternate"
     type="application/rss+xml"
     title="Money's the Matter RSS Feed"
     href="https://feeds.buzzsprout.com/2633998.rss"
-  />
+  >
 
-  <link rel="stylesheet" href="/css/main.css" />
+
+  <!-- =====================================================
+       EXISTING SITE CSS
+  ====================================================== -->
+
+  <link
+    rel="stylesheet"
+    href="/css/main.css"
+  >
+
+
+  <!-- =====================================================
+       SMALL EPISODE PAGE ADDITIONS
+  ====================================================== -->
+
+  <style>
+
+    /*
+      Keeps episode chronology visually clear.
+    */
+
+    .episodes-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+
+    /*
+      Make each row feel clickable without
+      turning the entire article into a link.
+    */
+
+    .episode-row-title {
+      transition: color 150ms ease;
+    }
+
+
+    .episode-row-title:hover {
+      color: #d6ad65 !important;
+    }
+
+
+    /*
+      Episode action links.
+    */
+
+    .episode-row-links a {
+      white-space: nowrap;
+    }
+
+
+    /*
+      Small label for the newest episode.
+    */
+
+    .episode-new {
+      display: inline-block;
+
+      margin-left: 8px;
+
+      color: #d6ad65;
+
+      font-size: 0.68rem;
+
+      font-weight: 700;
+
+      letter-spacing: 0.1em;
+
+      text-transform: uppercase;
+    }
+
+
+    /*
+      Apple official badge in follow section.
+    */
+
+    .platform-badge {
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      min-height: 58px;
+
+      padding: 8px 16px;
+
+      border: 1px solid rgba(185, 138, 61, 0.38);
+
+      border-radius: 15px;
+
+      text-decoration: none;
+
+      transition:
+        transform 160ms ease,
+        border-color 160ms ease;
+    }
+
+
+    .platform-badge:hover {
+      transform: translateY(-2px);
+
+      border-color: #d6ad65;
+    }
+
+
+    .platform-badge img {
+      display: block;
+
+      width: auto;
+
+      height: 40px;
+
+      max-width: 100%;
+    }
+
+
+    /*
+      Spotify / Amazon / YouTube temporary
+      logo buttons until full official badges
+      are available.
+    */
+
+    .platform-logo {
+      width: 24px;
+
+      height: 24px;
+
+      object-fit: contain;
+
+      flex-shrink: 0;
+    }
+
+
+    .platform-button {
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 10px;
+    }
+
+
+    @media (max-width: 700px) {
+
+      .episode-new {
+        display: block;
+
+        width: max-content;
+
+        margin:
+          5px 0 0;
+      }
+
+    }
+
+  </style>
+
 </head>
 
+
+
 <body>
+
+
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
+
   <header class="site-header">
+
     <div class="shell nav">
-      <a class="brand" href="/" aria-label="Money's the Matter home">
+
+
+      <a
+        class="brand"
+        href="/"
+        aria-label="Money's the Matter home"
+      >
+
         <img
           class="brand-mark"
           src="/images/logo/mtm-logo.png"
           alt=""
-        />
+        >
 
-        <span class="brand-name">Money's the Matter</span>
+        <span class="brand-name">
+          Money's the Matter
+        </span>
+
       </a>
 
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="/episodes/trailer/">Start Here</a>
-        <a href="/episodes/" aria-current="page">Episodes</a>
-        <a href="/#about">About</a>
-        <a href="/#listen">Subscribe</a>
+
+      <nav
+        class="nav-links"
+        aria-label="Primary navigation"
+      >
+
+        <a href="/episodes/trailer/">
+          Start Here
+        </a>
+
+        <a
+          href="/episodes/"
+          aria-current="page"
+        >
+          Episodes
+        </a>
+
+        <a href="/#about">
+          About
+        </a>
+
+        <a href="/#listen">
+          Subscribe
+        </a>
+
       </nav>
+
+
     </div>
+
   </header>
 
+
+
   <main>
+
+
+    <!-- =====================================================
+         EPISODES HERO
+    ====================================================== -->
+
     <section class="episode-hero">
+
       <div class="shell episode-hero-inner">
-        <p class="section-kicker">The archive</p>
+
+
+        <p class="episode-number">
+          Money's the Matter
+        </p>
+
 
         <h1 class="episode-page-title">
+
           Every story
-          <span>starts somewhere.</span>
+
+          <span>
+            starts somewhere.
+          </span>
+
         </h1>
 
+
         <p class="episode-deck">
-          Begin with the trailer, then follow Season One from the earliest
-          human agreements toward the systems, markets, and ideas that still
-          shape the way we live.
+
+          Begin with the trailer, then follow Season One
+          from the earliest human agreements toward the
+          systems, markets, and ideas that still shape
+          the way we live.
+
         </p>
+
+
       </div>
+
     </section>
 
+
+
+    <!-- =====================================================
+         TRAILER
+    ====================================================== -->
+
     <section class="section">
+
       <div class="shell">
-        <p class="section-kicker">Start here</p>
-        <h2 class="section-title">Meet the show.</h2>
+
+
+        <p class="section-kicker">
+          Start here
+        </p>
+
+
+        <h2 class="section-title">
+          Meet the show.
+        </h2>
+
 
         <div class="latest">
+
+
           <a
             class="episode-art"
             href="/episodes/trailer/"
             aria-label="Open the Money's the Matter trailer"
             style="display: block; text-decoration: none;"
           >
+
             <img
               src="/images/logo/mtm-logo.png"
               alt="Money's the Matter podcast artwork"
-            />
+            >
+
           </a>
 
+
+
           <div>
-            <p class="episode-number">Series Trailer</p>
+
+
+            <p class="episode-number">
+              Series Trailer
+            </p>
+
 
             <h2 class="episode-title">
+
               <a
                 href="/episodes/trailer/"
                 style="color: inherit; text-decoration: none;"
               >
+
                 Welcome to Money's the Matter
+
               </a>
+
             </h2>
 
+
             <p class="episode-summary">
-              A brief introduction to the stories, questions, and history
-              behind a podcast about money—and the human agreements that give
-              it power.
+
+              A brief introduction to the stories,
+              questions, and history behind a podcast
+              about money—and the human agreements
+              that give it power.
+
             </p>
+
 
             <div
               class="episode-platforms"
               aria-label="Open the trailer or begin Season One"
             >
-              <a href="/episodes/trailer/">Open Trailer</a>
+
+              <a href="/episodes/trailer/">
+                Open Trailer
+              </a>
 
               <a href="/episodes/humanitys-greatest-agreement/">
                 Begin Season One
               </a>
+
             </div>
+
+
           </div>
+
+
         </div>
+
+
       </div>
+
     </section>
 
+
+
+    <!-- =====================================================
+         SEASON ONE
+    ====================================================== -->
+
     <section class="section">
+
       <div class="shell">
-        <p class="section-kicker">Season One</p>
-        <h2 class="section-title">The history of money.</h2>
+
+
+        <p class="section-kicker">
+          Season One
+        </p>
+
+
+        <h2 class="section-title">
+          The history of money.
+        </h2>
+
 
         <div class="episodes-list">
-          <!-- Episode One -->
+
+
+
+          <!-- =================================================
+               EPISODE ONE
+          ================================================== -->
+
           <article class="episode-row">
-            <span class="episode-row-number">S1 · E1</span>
+
+
+            <span class="episode-row-number">
+              S1 · E1
+            </span>
+
 
             <span>
+
+
               <a
                 class="episode-row-title"
                 href="/episodes/humanitys-greatest-agreement/"
                 style="color: inherit; text-decoration: none;"
               >
-                Money: Humanity's Greatest Agreement
+
+                Money Is a Human Story
+
               </a>
+
 
               <span class="episode-row-copy">
-                A journey from memory and exchange toward trust, cities, and
-                money.
+
+                Humanity's Greatest Agreement — a journey
+                from memory and exchange toward trust,
+                cities, and money.
+
               </span>
+
+
             </span>
+
 
             <span class="episode-row-links">
+
               <a href="/episodes/humanitys-greatest-agreement/">
-                Read Essay
+                Open Episode →
               </a>
+
             </span>
+
+
           </article>
 
-          <!--
-          DUPLICATE THIS ARTICLE FOR EACH NEW EPISODE
+
+
+          <!-- =================================================
+               EPISODE TWO
+          ================================================== -->
 
           <article class="episode-row">
-            <span class="episode-row-number">S1 · E2</span>
+
+
+            <span class="episode-row-number">
+              S1 · E2
+            </span>
+
 
             <span>
+
+
               <a
                 class="episode-row-title"
-                href="/episodes/[EPISODE-SLUG]/"
+                href="/episodes/trust-moves-with-us/"
                 style="color: inherit; text-decoration: none;"
               >
-                [EPISODE-TITLE]
+
+                The Story of Coins
+
+                <span class="episode-new">
+                  New
+                </span>
+
+              </a>
+
+
+              <span class="episode-row-copy">
+
+                Trust Moves with Us — from ancient Lydia
+                and the first stamped coins to the moment
+                trust could travel farther than reputation.
+
+              </span>
+
+
+            </span>
+
+
+            <span class="episode-row-links">
+
+              <a href="/episodes/trust-moves-with-us/">
+                Open Episode →
+              </a>
+
+            </span>
+
+
+          </article>
+
+
+
+          <!-- =================================================
+               FUTURE EPISODE TEMPLATE
+
+               COPY THIS BLOCK FOR EPISODE 3, 4, ETC.
+
+          ==================================================
+
+          <article class="episode-row">
+
+            <span class="episode-row-number">
+              S1 · E3
+            </span>
+
+            <span>
+
+              <a
+                class="episode-row-title"
+                href="/episodes/EPISODE-SLUG/"
+                style="color: inherit; text-decoration: none;"
+              >
+
+                EPISODE TITLE
+
               </a>
 
               <span class="episode-row-copy">
-                [SHORT-DESCRIPTION]
+
+                EPISODE SUBTITLE — short description.
+
               </span>
+
             </span>
 
             <span class="episode-row-links">
-              <a href="/episodes/[EPISODE-SLUG]/">Read Essay</a>
+
+              <a href="/episodes/EPISODE-SLUG/">
+                Open Episode →
+              </a>
+
             </span>
+
           </article>
-          -->
+
+          ================================================== -->
+
+
         </div>
+
+
       </div>
+
     </section>
 
-    <section class="section listen-section">
+
+
+    <!-- =====================================================
+         LISTEN AND FOLLOW
+    ====================================================== -->
+
+    <section
+      class="section listen-section"
+      id="listen"
+    >
+
       <div class="shell">
+
+
         <div class="listen-card">
-          <p class="section-kicker">Listen and follow</p>
+
+
+          <p class="section-kicker">
+            Listen and follow
+          </p>
+
 
           <h2 class="section-title">
-            Find Money's the Matter in the app you already use.
+
+            Find Money's the Matter in the app
+            you already use.
+
           </h2>
 
+
           <p>
-            Follow the show so new episodes appear automatically.
+
+            Follow the show so new episodes
+            appear automatically.
+
           </p>
+
+
 
           <div
             class="platform-grid"
             aria-label="Follow Money's the Matter"
           >
+
+
+            <!-- =================================================
+                 APPLE PODCASTS
+            ================================================== -->
+
             <a
-              class="platform-button"
+              class="platform-badge"
               href="https://podcasts.apple.com/podcast/id6797090925"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Listen on Apple Podcasts"
             >
-              Apple Podcasts
+
+              <img
+                src="/assets/badges/apple.svg"
+                alt="Listen on Apple Podcasts"
+              >
+
             </a>
+
+
+
+            <!-- =================================================
+                 SPOTIFY
+            ================================================== -->
 
             <a
               class="platform-button"
@@ -276,8 +760,25 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              Spotify
+
+              <img
+                class="platform-logo"
+                src="https://cdn.simpleicons.org/spotify/1ED760"
+                alt=""
+                aria-hidden="true"
+              >
+
+              <span>
+                Spotify
+              </span>
+
             </a>
+
+
+
+            <!-- =================================================
+                 AMAZON MUSIC
+            ================================================== -->
 
             <a
               class="platform-button"
@@ -285,8 +786,25 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              Amazon Music
+
+              <img
+                class="platform-logo"
+                src="https://cdn.simpleicons.org/amazonmusic/25D1DA"
+                alt=""
+                aria-hidden="true"
+              >
+
+              <span>
+                Amazon Music
+              </span>
+
             </a>
+
+
+
+            <!-- =================================================
+                 YOUTUBE
+            ================================================== -->
 
             <a
               class="platform-button"
@@ -294,9 +812,24 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              YouTube
+
+              <img
+                class="platform-logo"
+                src="https://cdn.simpleicons.org/youtube/FF0000"
+                alt=""
+                aria-hidden="true"
+              >
+
+              <span>
+                YouTube
+              </span>
+
             </a>
+
+
           </div>
+
+
 
           <a
             class="rss-link"
@@ -304,31 +837,79 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            Prefer another podcast app? Subscribe with the RSS feed →
+
+            Prefer another podcast app?
+            Subscribe with the RSS feed →
+
           </a>
+
+
         </div>
+
+
       </div>
+
     </section>
+
+
   </main>
 
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
   <footer class="site-footer">
+
     <div class="shell footer-row">
-      <span>© 2026 Money's the Matter. All rights reserved.</span>
+
+
+      <span>
+
+        © 2026 Money's the Matter.
+        All rights reserved.
+
+      </span>
+
 
       <div class="footer-links">
-        <a href="/">Home</a>
-        <a href="/episodes/trailer/">Start Here</a>
-        <a href="/#about">About</a>
+
+
+        <a href="/">
+          Home
+        </a>
+
+
+        <a href="/episodes/trailer/">
+          Start Here
+        </a>
+
+
+        <a href="/#about">
+          About
+        </a>
+
 
         <a
           href="https://feeds.buzzsprout.com/2633998.rss"
           target="_blank"
           rel="noopener noreferrer"
         >
+
           RSS
+
         </a>
+
+
       </div>
+
+
     </div>
+
   </footer>
+
+
 </body>
+
 </html>
