@@ -189,24 +189,21 @@
 
 
   <!-- =====================================================
-       HOMEPAGE ADDITIONS
+       HOMEPAGE CSS
   ====================================================== -->
 
   <style>
 
-    /* -----------------------------------------------------
-       HERO LISTEN BUTTONS
-    ------------------------------------------------------ */
+    /* =====================================================
+       PLATFORM BADGES
+    ====================================================== */
 
     .hero-platforms {
 
       display: grid;
 
       grid-template-columns:
-        repeat(
-          4,
-          minmax(0, 1fr)
-        );
+        repeat(4, minmax(0, 1fr));
 
       gap: 12px;
 
@@ -216,7 +213,7 @@
 
     .platform-badge {
 
-      min-height: 58px;
+      min-height: 62px;
 
       display: flex;
 
@@ -224,8 +221,7 @@
 
       justify-content: center;
 
-      padding:
-        8px 16px;
+      padding: 8px 18px;
 
       border:
         1px solid rgba(185, 138, 61, 0.38);
@@ -236,6 +232,8 @@
         rgba(7, 9, 13, 0.5);
 
       text-decoration: none;
+
+      overflow: hidden;
 
       transition:
         transform 160ms ease,
@@ -263,80 +261,29 @@
 
       width: auto;
 
-      height: 40px;
-
       max-width: 100%;
-    }
 
-
-    .modern-platform {
-
-      min-height: 58px;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      gap: 10px;
-
-      padding:
-        10px 16px;
-
-      border:
-        1px solid rgba(185, 138, 61, 0.38);
-
-      border-radius: 15px;
-
-      background:
-        rgba(7, 9, 13, 0.5);
-
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-      font-size: 0.9rem;
-
-      font-weight: 700;
-
-      text-decoration: none;
-
-      transition:
-        transform 160ms ease,
-        border-color 160ms ease,
-        background 160ms ease;
-    }
-
-
-    .modern-platform:hover {
-
-      transform:
-        translateY(-2px);
-
-      border-color:
-        #d6ad65;
-
-      background:
-        rgba(185, 138, 61, 0.08);
-    }
-
-
-    .modern-platform img {
-
-      width: 24px;
-
-      height: 24px;
+      max-height: 42px;
 
       object-fit: contain;
     }
 
 
+    /*
+      YouTube PNG may naturally have slightly
+      different dimensions than the SVG badges.
+    */
 
-    /* -----------------------------------------------------
+    .platform-badge.youtube img {
+
+      max-height: 40px;
+    }
+
+
+
+    /* =====================================================
        HERO ACTIONS
-    ------------------------------------------------------ */
+    ====================================================== */
 
     .hero-actions {
 
@@ -361,8 +308,7 @@
 
       justify-content: center;
 
-      padding:
-        13px 20px;
+      padding: 13px 20px;
 
       border-radius: 999px;
 
@@ -414,9 +360,9 @@
 
 
 
-    /* -----------------------------------------------------
-       LATEST EPISODE CARD
-    ------------------------------------------------------ */
+    /* =====================================================
+       LATEST EPISODE
+    ====================================================== */
 
     .latest-label {
 
@@ -461,13 +407,14 @@
 
       justify-content: center;
 
-      padding:
-        10px 16px;
+      padding: 10px 16px;
 
       border:
         1px solid rgba(185, 138, 61, 0.38);
 
       border-radius: 999px;
+
+      color: inherit;
 
       font-family:
         Arial,
@@ -479,6 +426,10 @@
       font-weight: 700;
 
       text-decoration: none;
+
+      transition:
+        border-color 160ms ease,
+        transform 160ms ease;
     }
 
 
@@ -486,13 +437,16 @@
 
       border-color:
         #d6ad65;
+
+      transform:
+        translateY(-2px);
     }
 
 
 
-    /* -----------------------------------------------------
-       EPISODE ARCHIVE
-    ------------------------------------------------------ */
+    /* =====================================================
+       EPISODE LIST
+    ====================================================== */
 
     .episode-new {
 
@@ -524,9 +478,28 @@
 
 
 
-    /* -----------------------------------------------------
+    /* =====================================================
+       LISTEN SECTION SPACING
+    ====================================================== */
+
+    .listen-card .hero-platforms {
+
+      margin-top: 26px;
+    }
+
+
+    .rss-under-platforms {
+
+      display: inline-block;
+
+      margin-top: 24px;
+    }
+
+
+
+    /* =====================================================
        RESPONSIVE
-    ------------------------------------------------------ */
+    ====================================================== */
 
     @media
     (max-width: 780px) {
@@ -534,10 +507,7 @@
       .hero-platforms {
 
         grid-template-columns:
-          repeat(
-            2,
-            minmax(0, 1fr)
-          );
+          repeat(2, minmax(0, 1fr));
       }
 
     }
@@ -548,8 +518,7 @@
 
       .hero-platforms {
 
-        grid-template-columns:
-          1fr;
+        grid-template-columns: 1fr;
       }
 
 
@@ -563,6 +532,12 @@
       .secondary-action {
 
         width: 100%;
+      }
+
+
+      .platform-badge {
+
+        min-height: 64px;
       }
 
     }
@@ -602,6 +577,7 @@
         </span>
 
       </a>
+
 
 
       <nav
@@ -645,7 +621,6 @@
 
       <div class="shell">
 
-
         <div class="hero-card">
 
 
@@ -658,8 +633,7 @@
 
           <p class="eyebrow">
 
-            A narrative podcast by
-            Bryan Yach, CFP®
+            A narrative podcast by Bryan Yach, CFP®
 
           </p>
 
@@ -675,6 +649,7 @@
           <p class="tagline">
 
             Stories About Money.
+
             <br>
 
             History That Still Shapes Us.
@@ -695,7 +670,10 @@
 
 
           <!-- =================================================
-               LISTENING PLATFORMS
+               PODCAST PLATFORM BADGES
+
+               Images already contain the service names,
+               so no duplicate visible text is added.
           ================================================== -->
 
           <div
@@ -704,7 +682,7 @@
           >
 
 
-            <!-- APPLE -->
+            <!-- APPLE PODCASTS -->
 
             <a
               class="platform-badge"
@@ -726,21 +704,17 @@
             <!-- SPOTIFY -->
 
             <a
-              class="modern-platform"
+              class="platform-badge"
               href="https://open.spotify.com/show/033ZMVAOk3TJEkOdaIOEJC"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Listen on Spotify"
             >
 
               <img
-                src="https://cdn.simpleicons.org/spotify/1ED760"
-                alt=""
-                aria-hidden="true"
+                src="/assets/badges/spotify.svg"
+                alt="Listen on Spotify"
               >
-
-              <span>
-                Spotify
-              </span>
 
             </a>
 
@@ -749,21 +723,17 @@
             <!-- AMAZON MUSIC -->
 
             <a
-              class="modern-platform"
+              class="platform-badge"
               href="https://music.amazon.com/podcasts/750e1dbd-d1ed-47b5-9a2e-bfb49ba24e11"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Listen on Amazon Music"
             >
 
               <img
-                src="https://cdn.simpleicons.org/amazonmusic/25D1DA"
-                alt=""
-                aria-hidden="true"
+                src="/assets/badges/amazon-music.svg"
+                alt="Listen on Amazon Music"
               >
-
-              <span>
-                Amazon Music
-              </span>
 
             </a>
 
@@ -772,21 +742,17 @@
             <!-- YOUTUBE -->
 
             <a
-              class="modern-platform"
+              class="platform-badge youtube"
               href="https://youtube.com/@moneysthematter"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Watch Money's the Matter on YouTube"
             >
 
               <img
-                src="https://cdn.simpleicons.org/youtube/FF0000"
-                alt=""
-                aria-hidden="true"
+                src="/assets/badges/youtube.png"
+                alt="Watch on YouTube"
               >
-
-              <span>
-                YouTube
-              </span>
 
             </a>
 
@@ -796,7 +762,7 @@
 
 
           <!-- =================================================
-               PRIMARY ACTIONS
+               PRIMARY CTA BUTTONS
           ================================================== -->
 
           <div class="hero-actions">
@@ -826,7 +792,6 @@
 
 
         </div>
-
 
       </div>
 
@@ -869,7 +834,9 @@
 
 
           <span class="latest-label">
+
             Latest Episode
+
           </span>
 
 
@@ -923,17 +890,22 @@
           </p>
 
 
+
           <div class="latest-actions">
 
 
-            <a href="/episodes/trust-moves-with-us/">
+            <a
+              href="/episodes/trust-moves-with-us/"
+            >
 
               Listen & Read →
 
             </a>
 
 
-            <a href="/episodes/">
+            <a
+              href="/episodes/"
+            >
 
               View All Episodes
 
@@ -968,7 +940,9 @@
 
 
           <p class="section-kicker">
+
             About the show
+
           </p>
 
 
@@ -1063,7 +1037,9 @@
 
 
         <p class="section-kicker">
+
           Episodes
+
         </p>
 
 
@@ -1124,7 +1100,9 @@
             <span class="episode-row-links">
 
 
-              <a href="/episodes/trailer/">
+              <a
+                href="/episodes/trailer/"
+              >
 
                 Open Trailer →
 
@@ -1335,13 +1313,17 @@
 
 
 
+          <!-- =================================================
+               SAME FOUR PLATFORM BADGES
+          ================================================== -->
+
           <div
             class="hero-platforms"
             aria-label="Follow Money's the Matter"
           >
 
 
-            <!-- APPLE -->
+            <!-- APPLE PODCASTS -->
 
             <a
               class="platform-badge"
@@ -1363,122 +1345,55 @@
             <!-- SPOTIFY -->
 
             <a
-              class="modern-platform"
+              class="platform-badge"
               href="https://open.spotify.com/show/033ZMVAOk3TJEkOdaIOEJC"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Listen on Spotify"
             >
 
               <img
-                src="https://cdn.simpleicons.org/spotify/1ED760"
-                alt=""
-                aria-hidden="true"
+                src="/assets/badges/spotify.svg"
+                alt="Listen on Spotify"
               >
-
-              <span>
-                Spotify
-              </span>
 
             </a>
 
 
 
-            <!-- AMAZON -->
+            <!-- AMAZON MUSIC -->
 
             <a
-              class="platform"
+              class="platform-badge"
               href="https://music.amazon.com/podcasts/750e1dbd-d1ed-47b5-9a2e-bfb49ba24e11"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Listen on Amazon Music"
             >
 
-              <svg
-                class="platform-icon"
-                viewBox="0 0 32 32"
-                aria-hidden="true"
+              <img
+                src="/assets/badges/amazon-music.svg"
+                alt="Listen on Amazon Music"
               >
 
-                <rect
-                  width="32"
-                  height="32"
-                  rx="7"
-                  fill="#25D1DA"
-                >
-                </rect>
-
-                <path
-                  d="
-                    M9 18.5
-                    c4.6 3.1
-                    10.5 3.1
-                    15 0
-                  "
-                  fill="none"
-                  stroke="#111827"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                >
-                </path>
-
-                <path
-                  d="
-                    M21.4 20.3
-                    l2.9-1.9
-                    -.6 3.4
-                  "
-                  fill="none"
-                  stroke="#111827"
-                  stroke-width="1.6"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                </path>
-
-                <text
-                  x="16"
-                  y="15.7"
-                  text-anchor="middle"
-                  font-family="Arial, sans-serif"
-                  font-size="9"
-                  font-weight="700"
-                  fill="#111827"
-                >
-                  music
-                </text>
-
-              </svg>
-
-
-              <span>
-                Amazon Music
-              </span>
-
-
             </a>
-
-
 
 
 
             <!-- YOUTUBE -->
 
             <a
-              class="modern-platform"
+              class="platform-badge youtube"
               href="https://youtube.com/@moneysthematter"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Watch Money's the Matter on YouTube"
             >
 
               <img
-                src="https://cdn.simpleicons.org/youtube/FF0000"
-                alt=""
-                aria-hidden="true"
+                src="/assets/badges/youtube.png"
+                alt="Watch on YouTube"
               >
-
-              <span>
-                YouTube
-              </span>
 
             </a>
 
@@ -1487,8 +1402,12 @@
 
 
 
+          <!-- =================================================
+               RSS IS SECONDARY
+          ================================================== -->
+
           <a
-            class="rss-link"
+            class="rss-link rss-under-platforms"
             href="https://feeds.buzzsprout.com/2633998.rss"
             target="_blank"
             rel="noopener noreferrer"
