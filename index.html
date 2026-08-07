@@ -195,7 +195,12 @@
   <style>
 
     /* =====================================================
-       PLATFORM BADGES
+       PLATFORM BUTTONS
+       The artwork itself already includes:
+       - border
+       - logo
+       - service name
+       - Listen on / Watch on
     ====================================================== */
 
     .hero-platforms {
@@ -205,15 +210,15 @@
       grid-template-columns:
         repeat(4, minmax(0, 1fr));
 
-      gap: 12px;
+      gap: 16px;
 
-      margin-top: 30px;
+      margin-top: 32px;
+
+      align-items: center;
     }
 
 
-    .platform-badge {
-
-      min-height: 62px;
+    .platform-image-link {
 
       display: flex;
 
@@ -221,62 +226,47 @@
 
       justify-content: center;
 
-      padding: 8px 18px;
+      width: 100%;
 
-      border:
-        1px solid rgba(185, 138, 61, 0.38);
+      padding: 0;
 
-      border-radius: 15px;
+      margin: 0;
 
-      background:
-        rgba(7, 9, 13, 0.5);
+      border: 0;
+
+      background: transparent;
 
       text-decoration: none;
 
-      overflow: hidden;
+      overflow: visible;
 
       transition:
         transform 160ms ease,
-        border-color 160ms ease,
-        background 160ms ease;
+        filter 160ms ease;
     }
 
 
-    .platform-badge:hover {
+    .platform-image-link:hover {
 
       transform:
-        translateY(-2px);
+        translateY(-3px);
 
-      border-color:
-        #d6ad65;
-
-      background:
-        rgba(185, 138, 61, 0.08);
+      filter:
+        brightness(1.08);
     }
 
 
-    .platform-badge img {
+    .platform-image-link img {
 
       display: block;
 
-      width: auto;
+      width: 100%;
+
+      height: auto;
 
       max-width: 100%;
 
-      max-height: 42px;
-
       object-fit: contain;
-    }
-
-
-    /*
-      YouTube PNG may naturally have slightly
-      different dimensions than the SVG badges.
-    */
-
-    .platform-badge.youtube img {
-
-      max-height: 40px;
     }
 
 
@@ -295,7 +285,7 @@
 
       gap: 14px;
 
-      margin-top: 22px;
+      margin-top: 24px;
     }
 
 
@@ -336,16 +326,23 @@
         1px solid #d6ad65;
 
       background:
-        rgba(185, 138, 61, 0.16);
+        linear-gradient(
+          135deg,
+          #d6ad65,
+          #b98a3d
+        );
 
-      color: #f3eadc;
+      color: #07090d;
     }
 
 
     .secondary-action {
 
       border:
-        1px solid rgba(243, 234, 220, 0.17);
+        1px solid rgba(243, 234, 220, 0.18);
+
+      background:
+        rgba(7, 9, 13, 0.25);
 
       color: #b8afa3;
     }
@@ -429,7 +426,23 @@
 
       transition:
         border-color 160ms ease,
-        transform 160ms ease;
+        transform 160ms ease,
+        background 160ms ease;
+    }
+
+
+    .latest-actions a:first-child {
+
+      background:
+        linear-gradient(
+          135deg,
+          #d6ad65,
+          #b98a3d
+        );
+
+      color: #07090d;
+
+      border-color: #d6ad65;
     }
 
 
@@ -454,6 +467,14 @@
 
       margin-left: 8px;
 
+      padding:
+        2px 6px;
+
+      border:
+        1px solid rgba(214, 173, 101, 0.6);
+
+      border-radius: 999px;
+
       color: #d6ad65;
 
       font-family:
@@ -461,11 +482,11 @@
         Helvetica,
         sans-serif;
 
-      font-size: 0.65rem;
+      font-size: 0.62rem;
 
       font-weight: 700;
 
-      letter-spacing: 0.1em;
+      letter-spacing: 0.08em;
 
       text-transform: uppercase;
     }
@@ -479,7 +500,7 @@
 
 
     /* =====================================================
-       LISTEN SECTION SPACING
+       LISTEN SECTION
     ====================================================== */
 
     .listen-card .hero-platforms {
@@ -502,12 +523,14 @@
     ====================================================== */
 
     @media
-    (max-width: 780px) {
+    (max-width: 900px) {
 
       .hero-platforms {
 
         grid-template-columns:
           repeat(2, minmax(0, 1fr));
+
+        gap: 14px;
       }
 
     }
@@ -519,6 +542,12 @@
       .hero-platforms {
 
         grid-template-columns: 1fr;
+
+        max-width: 360px;
+
+        margin-left: auto;
+
+        margin-right: auto;
       }
 
 
@@ -532,12 +561,6 @@
       .secondary-action {
 
         width: 100%;
-      }
-
-
-      .platform-badge {
-
-        min-height: 64px;
       }
 
     }
@@ -670,10 +693,7 @@
 
 
           <!-- =================================================
-               PODCAST PLATFORM BADGES
-
-               Images already contain the service names,
-               so no duplicate visible text is added.
+               PLATFORM BUTTONS
           ================================================== -->
 
           <div
@@ -685,7 +705,7 @@
             <!-- APPLE PODCASTS -->
 
             <a
-              class="platform-badge"
+              class="platform-image-link"
               href="https://podcasts.apple.com/podcast/id6797090925"
               target="_blank"
               rel="noopener noreferrer"
@@ -693,7 +713,7 @@
             >
 
               <img
-                src="/assets/badges/apple.svg"
+                src="/assets/badges/applelink.png"
                 alt="Listen on Apple Podcasts"
               >
 
@@ -704,7 +724,7 @@
             <!-- SPOTIFY -->
 
             <a
-              class="platform-badge"
+              class="platform-image-link"
               href="https://open.spotify.com/show/033ZMVAOk3TJEkOdaIOEJC"
               target="_blank"
               rel="noopener noreferrer"
@@ -712,7 +732,7 @@
             >
 
               <img
-                src="/assets/badges/spotify.svg"
+                src="/assets/badges/spotifylink.png"
                 alt="Listen on Spotify"
               >
 
@@ -723,7 +743,7 @@
             <!-- AMAZON MUSIC -->
 
             <a
-              class="platform-badge"
+              class="platform-image-link"
               href="https://music.amazon.com/podcasts/750e1dbd-d1ed-47b5-9a2e-bfb49ba24e11"
               target="_blank"
               rel="noopener noreferrer"
@@ -731,7 +751,7 @@
             >
 
               <img
-                src="/assets/badges/amazon-music.svg"
+                src="/assets/badges/amazonlink.png"
                 alt="Listen on Amazon Music"
               >
 
@@ -742,7 +762,7 @@
             <!-- YOUTUBE -->
 
             <a
-              class="platform-badge youtube"
+              class="platform-image-link"
               href="https://youtube.com/@moneysthematter"
               target="_blank"
               rel="noopener noreferrer"
@@ -750,7 +770,7 @@
             >
 
               <img
-                src="/assets/badges/youtube.png"
+                src="/assets/badges/youtubelink.png"
                 alt="Watch on YouTube"
               >
 
@@ -762,7 +782,7 @@
 
 
           <!-- =================================================
-               PRIMARY CTA BUTTONS
+               HERO CTAs
           ================================================== -->
 
           <div class="hero-actions">
@@ -1055,9 +1075,7 @@
 
 
 
-          <!-- =================================================
-               TRAILER
-          ================================================== -->
+          <!-- TRAILER -->
 
           <article class="episode-row">
 
@@ -1116,9 +1134,7 @@
 
 
 
-          <!-- =================================================
-               EPISODE ONE
-          ================================================== -->
+          <!-- EPISODE ONE -->
 
           <article class="episode-row">
 
@@ -1178,9 +1194,7 @@
 
 
 
-          <!-- =================================================
-               EPISODE TWO
-          ================================================== -->
+          <!-- EPISODE TWO -->
 
           <article class="episode-row">
 
@@ -1314,7 +1328,7 @@
 
 
           <!-- =================================================
-               SAME FOUR PLATFORM BADGES
+               SAME PLATFORM BUTTONS
           ================================================== -->
 
           <div
@@ -1323,10 +1337,10 @@
           >
 
 
-            <!-- APPLE PODCASTS -->
+            <!-- APPLE -->
 
             <a
-              class="platform-badge"
+              class="platform-image-link"
               href="https://podcasts.apple.com/podcast/id6797090925"
               target="_blank"
               rel="noopener noreferrer"
@@ -1334,7 +1348,7 @@
             >
 
               <img
-                src="/assets/badges/apple.svg"
+                src="/assets/badges/applelink.png"
                 alt="Listen on Apple Podcasts"
               >
 
@@ -1345,7 +1359,7 @@
             <!-- SPOTIFY -->
 
             <a
-              class="platform-badge"
+              class="platform-image-link"
               href="https://open.spotify.com/show/033ZMVAOk3TJEkOdaIOEJC"
               target="_blank"
               rel="noopener noreferrer"
@@ -1353,7 +1367,7 @@
             >
 
               <img
-                src="/assets/badges/spotify.svg"
+                src="/assets/badges/spotifylink.png"
                 alt="Listen on Spotify"
               >
 
@@ -1361,10 +1375,10 @@
 
 
 
-            <!-- AMAZON MUSIC -->
+            <!-- AMAZON -->
 
             <a
-              class="platform-badge"
+              class="platform-image-link"
               href="https://music.amazon.com/podcasts/750e1dbd-d1ed-47b5-9a2e-bfb49ba24e11"
               target="_blank"
               rel="noopener noreferrer"
@@ -1372,7 +1386,7 @@
             >
 
               <img
-                src="/assets/badges/amazon-music.svg"
+                src="/assets/badges/amazonlink.png"
                 alt="Listen on Amazon Music"
               >
 
@@ -1383,7 +1397,7 @@
             <!-- YOUTUBE -->
 
             <a
-              class="platform-badge youtube"
+              class="platform-image-link"
               href="https://youtube.com/@moneysthematter"
               target="_blank"
               rel="noopener noreferrer"
@@ -1391,7 +1405,7 @@
             >
 
               <img
-                src="/assets/badges/youtube.png"
+                src="/assets/badges/youtubelink.png"
                 alt="Watch on YouTube"
               >
 
@@ -1403,7 +1417,7 @@
 
 
           <!-- =================================================
-               RSS IS SECONDARY
+               RSS
           ================================================== -->
 
           <a
