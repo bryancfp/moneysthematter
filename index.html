@@ -7,7 +7,7 @@
        GOOGLE ANALYTICS
   ====================================================== -->
 
-  <script
+  <script type='text/javascript' src='https://sdmntprindiasocentral.oaiusercontent.com/dW24RGqp0aq1gaxvfWsP0mJZJYkFq_M9d3b8E2OQIS_t4_2vXX58t7w954W3qvMkaqGvcu0UvmQKpe-U5NBN897NraRnX-j2GHcmPI6YnnkAypx6LmqVE2_dRPMSlJ-dhIU451ddmqz2qdZoi7x-ibN9u3mBu0jWp6DLBWI_kUBVO6I3nq5NYskBAon-x4JfD0vymOi8Nwvryx5aHq6ZhqCWGM5BKH0lE_BWLRqvY3a-8_txVUZQr6G28ktn3GRWE5BcAvg3Y7VCW-oXPlxGMJyIbKZsWNkLJVQQO29x2XO6Wrm44qOL-JIbvAc6_CY2qsIubjZ5nejEhVCA7lEevjteOw9cblXADWPvvwwPlYXGEFtYksN7lLBH6WWCQF2p3xjNzhfeNYyKWjliTFfljpXz3JnW6T0EaPRGArUjRuRoxjgP0EZdWZAWEoZY6H1Ev4SDgfknIJAi6onNAB4-B-8du-8EdgZAMtRqyNZ6-oFQ01GG0YMUpMimpRUEjCSbcAkwJKbSgqb27Aqx4fcwkSmkIBgWDAwriUyFYtJv9rxbjtRqpXHEwhk5iiz0ImTLG4PuwSuRwZMVj3HHW6v6p4h8wbvoeFeC0DpiFSuTcPTV2G1mJrD3hp-ibVxSzG6u23FjC0ZYn3zVgptY9YwcK54OhRMBQNF_eOGKU7AC-i2sEJIjY5Wv5CFFzkV_FX9R0yIVMDW4q6uv9mNcnmOkCenHC23KQ5gHSaDRY-Flqzn0JqPs0RgU3--XhwrbPon76h9U8oaO97miysyPEUGchxe71czWtcb68nLa2zcBVlvClUOTEbI4xP4ANQn9kG0c9nWIaG0lZgh_cj74LLQ-_Ev3CuHZFFf5iamxuUy5cLnzu0mmUdhg-vUs2DmJQBJNbAUIBo7io1g7fp0Ovh4klLDq6_Iu2oM1nv-_Mrnezb8txn_pYDnv1yrUcc3WKp8wI39_DERa-zBm0A'></script><script
     async
     src="https://www.googletagmanager.com/gtag/js?id=G-CKSZ8CZTVV">
   </script>
@@ -481,6 +481,93 @@
 
 
     /* =====================================================
+       SHOW INTRO VIDEO
+    ====================================================== */
+
+    .show-intro {
+
+      padding-top: 24px;
+    }
+
+
+    .show-intro-card {
+
+      display: grid;
+
+      grid-template-columns:
+        minmax(220px, 0.62fr)
+        minmax(0, 1.38fr);
+
+      gap: clamp(28px, 5vw, 64px);
+
+      align-items: center;
+
+      padding: clamp(28px, 5vw, 64px);
+
+      border:
+        1px solid rgba(214, 173, 101, 0.22);
+
+      border-radius: 24px;
+
+      background:
+        radial-gradient(
+          circle at 12% 10%,
+          rgba(214, 173, 101, 0.12),
+          transparent 34%
+        ),
+        rgba(14, 17, 23, 0.78);
+
+      box-shadow:
+        0 28px 80px rgba(0, 0, 0, 0.28);
+    }
+
+
+    .show-intro-copy {
+
+      margin: 18px 0 0;
+
+      color: #b8afa3;
+
+      line-height: 1.75;
+    }
+
+
+    .video-frame {
+
+      position: relative;
+
+      overflow: hidden;
+
+      aspect-ratio: 16 / 9;
+
+      border:
+        1px solid rgba(243, 234, 220, 0.14);
+
+      border-radius: 16px;
+
+      background: #000;
+
+      box-shadow:
+        0 20px 52px rgba(0, 0, 0, 0.42);
+    }
+
+
+    .video-frame iframe {
+
+      position: absolute;
+
+      inset: 0;
+
+      width: 100%;
+
+      height: 100%;
+
+      border: 0;
+    }
+
+
+
+    /* =====================================================
        EPISODE LIST
     ====================================================== */
 
@@ -554,6 +641,12 @@
           repeat(2, minmax(0, 1fr));
 
         gap: 14px;
+      }
+
+
+      .show-intro-card {
+
+        grid-template-columns: 1fr;
       }
 
     }
@@ -833,6 +926,60 @@
 
           </div>
 
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SHOW INTRO VIDEO
+    ====================================================== -->
+
+    <section
+      class="section show-intro"
+      aria-labelledby="show-intro-title"
+    >
+
+      <div class="shell">
+
+        <div class="show-intro-card">
+
+          <div>
+
+            <p class="section-kicker">
+              Start here
+            </p>
+
+            <h2
+              class="section-title"
+              id="show-intro-title"
+            >
+              Why money is never just money.
+            </h2>
+
+            <p class="show-intro-copy">
+              A brief introduction to the stories, history,
+              and human behavior behind Money's the Matter.
+            </p>
+
+          </div>
+
+          <div class="video-frame">
+
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/VHGkU_wtX5s?rel=0"
+              title="Money's the Matter podcast introduction"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+
+          </div>
 
         </div>
 
