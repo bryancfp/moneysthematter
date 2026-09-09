@@ -33,13 +33,16 @@
     content="width=device-width, initial-scale=1.0"
   >
 
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Bryan Yach, CFP®">
+
   <title>
-    Episodes | Money's the Matter Podcast
+    Financial History & Economics Podcast Episodes | Money's the Matter
   </title>
 
   <meta
     name="description"
-    content="Explore every Money's the Matter episode about financial history, economics, the psychology of money, markets, and the human stories behind how money works."
+    content="Browse Money's the Matter episodes on financial history, economics, market bubbles, inflation, money, banking, and the psychology that shapes financial decisions."
   >
 
   <link
@@ -54,18 +57,21 @@
 
   <meta
     property="og:title"
-    content="Episodes | Money's the Matter Podcast"
+    content="Financial History & Economics Podcast Episodes | Money's the Matter"
   >
 
   <meta
     property="og:description"
-    content="Explore the complete Money's the Matter episode archive, from the origins of money to inflation and the financial systems shaping everyday life."
+    content="Explore podcast episodes on financial history, economics, inflation, market bubbles, banking, money, and the psychology behind financial decisions."
   >
 
   <meta
     property="og:type"
     content="website"
   >
+
+  <meta property="og:site_name" content="Money's the Matter">
+  <meta property="og:locale" content="en_US">
 
   <meta
     property="og:url"
@@ -89,18 +95,20 @@
 
   <meta
     name="twitter:title"
-    content="Episodes | Money's the Matter Podcast"
+    content="Financial History & Economics Podcast Episodes | Money's the Matter"
   >
 
   <meta
     name="twitter:description"
-    content="Explore the complete Money's the Matter episode archive, from the origins of money to inflation and the financial systems shaping everyday life."
+    content="Explore podcast episodes on financial history, economics, inflation, market bubbles, banking, money, and the psychology behind financial decisions."
   >
 
   <meta
     name="twitter:image"
     content="https://moneysthematter.com/images/logo/mtm-logo.png"
   >
+
+  <meta name="twitter:image:alt" content="Money's the Matter podcast artwork">
 
 
   <!-- =====================================================
@@ -161,41 +169,112 @@
   ====================================================== -->
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "PodcastSeries",
-    "@id": "https://moneysthematter.com/#podcast",
-    "name": "Money's the Matter",
-    "url": "https://moneysthematter.com/",
-    "description": "Money's the Matter is a narrative podcast exploring financial history, economics, the psychology of money, markets, and the human stories behind how money works.",
-    "image": "https://moneysthematter.com/images/logo/mtm-logo.png",
-    "inLanguage": "en-US",
-    "genre": [
-      "Financial History",
-      "Economics",
-      "Psychology",
-      "Money",
-      "Business"
-    ],
-    "author": {
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://moneysthematter.com/episodes/#webpage",
+      "url": "https://moneysthematter.com/episodes/",
+      "name": "Financial History & Economics Podcast Episodes | Money's the Matter",
+      "description": "Browse Money's the Matter episodes on financial history, economics, market bubbles, inflation, money, banking, and the psychology that shapes financial decisions.",
+      "isPartOf": {
+        "@id": "https://moneysthematter.com/#website"
+      },
+      "about": {
+        "@id": "https://moneysthematter.com/#podcast"
+      },
+      "mainEntity": {
+        "@id": "https://moneysthematter.com/episodes/#list"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://moneysthematter.com/episodes/#list",
+      "name": "Money's the Matter Podcast Episodes",
+      "numberOfItems": 8,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://moneysthematter.com/episodes/trailer/",
+          "name": "Welcome to Money's the Matter"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "url": "https://moneysthematter.com/episodes/humanitys-greatest-agreement/",
+          "name": "Money Is a Human Story"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "url": "https://moneysthematter.com/episodes/trust-moves-with-us/",
+          "name": "The Story of Coins"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "url": "https://moneysthematter.com/episodes/a-promise-on-paper/",
+          "name": "The Story of Paper Money"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "url": "https://moneysthematter.com/episodes/the-mississippi-bubble/",
+          "name": "The Mississippi Bubble"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "url": "https://moneysthematter.com/episodes/the-banker-who-saved-america/",
+          "name": "The Banker Who Saved America"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "url": "https://moneysthematter.com/episodes/the-story-of-inflation/",
+          "name": "Why Your Coffee Costs More"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "url": "https://moneysthematter.com/episodes/tulipmania/",
+          "name": "Tulipmania"
+        }
+      ]
+    },
+    {
+      "@type": "PodcastSeries",
+      "@id": "https://moneysthematter.com/#podcast",
+      "name": "Money's the Matter",
+      "url": "https://moneysthematter.com/",
+      "description": "A narrative podcast exploring financial history, economics, markets, the psychology of money, and the human stories behind financial systems.",
+      "image": "https://moneysthematter.com/images/logo/mtm-logo.png",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://moneysthematter.com/#bryan-yach"
+      },
+      "webFeed": "https://feeds.buzzsprout.com/2633998.rss"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://moneysthematter.com/#website",
+      "url": "https://moneysthematter.com/",
+      "name": "Money's the Matter",
+      "inLanguage": "en-US"
+    },
+    {
       "@type": "Person",
       "@id": "https://moneysthematter.com/#bryan-yach",
       "name": "Bryan Yach",
       "honorificSuffix": "CFP®",
-      "url": "https://moneysthematter.com/",
-      "jobTitle": "Financial Planner and Podcast Host"
-    },
-    "creator": {
-      "@id": "https://moneysthematter.com/#bryan-yach"
-    },
-    "sameAs": [
-      "https://podcasts.apple.com/podcast/id6797090925",
-      "https://open.spotify.com/show/033ZMVAOk3TJEkOdaIOEJC",
-      "https://music.amazon.com/podcasts/750e1dbd-d1ed-47b5-9a2e-bfb49ba24e11",
-      "https://youtube.com/@moneysthematter"
-    ],
-    "webFeed": "https://feeds.buzzsprout.com/2633998.rss"
-  }
+      "jobTitle": "Financial Planner and Podcast Host",
+      "url": "https://moneysthematter.com/about/"
+    }
+  ]
+}
   </script>
 
 
@@ -730,7 +809,7 @@
           Episodes
         </a>
 
-        <a href="/#about">
+        <a href="/about/">
           About
         </a>
 
@@ -767,11 +846,17 @@
         </p>
 
 
-        <h2 class="section-title">
+        <h1 class="section-title">
 
-          Begin at the beginning.
+          Money's the Matter Podcast Episodes
 
-        </h2>
+        </h1>
+
+        <p class="about-detail" style="max-width: 760px; margin-top: 18px;">
+          Explore narrative podcast episodes about financial history, economics,
+          inflation, banking, market bubbles, money, and the psychology behind
+          financial decisions. Start at the beginning or jump into any story.
+        </p>
 
 
 
@@ -1208,10 +1293,10 @@
 
           <a
             class="rss-link"
-            href="/episodes/"
+            href="/episodes/tulipmania/"
           >
 
-            View the complete episode archive →
+            Listen to the latest episode →
 
           </a>
 
@@ -1261,7 +1346,7 @@
         </a>
 
 
-        <a href="/#about">
+        <a href="/about/">
           About
         </a>
 

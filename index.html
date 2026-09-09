@@ -33,13 +33,16 @@
     content="width=device-width, initial-scale=1.0"
   >
 
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Bryan Yach, CFP®">
+
   <title>
-    Money's the Matter | Money, Economics & Financial History Podcast
+    Money's the Matter Podcast | Financial History, Economics & Money
   </title>
 
   <meta
     name="description"
-    content="Money\'s the Matter is a narrative podcast exploring financial history, economics, the psychology of money, markets, and the human stories behind how money works."
+    content="Money's the Matter is a narrative podcast about financial history, economics, markets, and the psychology of money—told through the people and events that shaped how money works."
   >
 
   <link
@@ -54,18 +57,21 @@
 
   <meta
     property="og:title"
-    content="Money's the Matter | Money, Economics & Financial History Podcast"
+    content="Money's the Matter Podcast | Financial History, Economics & Money"
   >
 
   <meta
     property="og:description"
-    content="A narrative podcast exploring financial history, economics, the psychology of money, markets, and the human stories behind how money works."
+    content="A narrative podcast about financial history, economics, markets, and the psychology of money—told through the people and events that shaped how money works."
   >
 
   <meta
     property="og:type"
     content="website"
   >
+
+  <meta property="og:site_name" content="Money's the Matter">
+  <meta property="og:locale" content="en_US">
 
   <meta
     property="og:url"
@@ -89,18 +95,20 @@
 
   <meta
     name="twitter:title"
-    content="Money's the Matter | Money, Economics & Financial History Podcast"
+    content="Money's the Matter Podcast | Financial History, Economics & Money"
   >
 
   <meta
     name="twitter:description"
-    content="A narrative podcast exploring financial history, economics, the psychology of money, markets, and the human stories behind how money works."
+    content="A narrative podcast about financial history, economics, markets, and the psychology of money—told through the people and events that shaped how money works."
   >
 
   <meta
     name="twitter:image"
     content="https://moneysthematter.com/images/logo/mtm-logo.png"
   >
+
+  <meta name="twitter:image:alt" content="Money's the Matter podcast artwork">
 
 
   <!-- =====================================================
@@ -161,41 +169,99 @@
   ====================================================== -->
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "PodcastSeries",
-    "@id": "https://moneysthematter.com/#podcast",
-    "name": "Money's the Matter",
-    "url": "https://moneysthematter.com/",
-    "description": "Money's the Matter is a narrative podcast exploring financial history, economics, the psychology of money, markets, and the human stories behind how money works.",
-    "image": "https://moneysthematter.com/images/logo/mtm-logo.png",
-    "inLanguage": "en-US",
-    "genre": [
-      "Financial History",
-      "Economics",
-      "Psychology",
-      "Money",
-      "Business"
-    ],
-    "author": {
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://moneysthematter.com/#website",
+      "url": "https://moneysthematter.com/",
+      "name": "Money's the Matter",
+      "description": "A narrative podcast about financial history, economics, markets, and the psychology of money.",
+      "inLanguage": "en-US",
+      "publisher": {
+        "@id": "https://moneysthematter.com/#podcast"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://moneysthematter.com/#webpage",
+      "url": "https://moneysthematter.com/",
+      "name": "Money's the Matter Podcast | Financial History, Economics & Money",
+      "description": "Money's the Matter is a narrative podcast about financial history, economics, markets, and the psychology of money—told through the people and events that shaped how money works.",
+      "isPartOf": {
+        "@id": "https://moneysthematter.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://moneysthematter.com/#podcast"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Financial history"
+        },
+        {
+          "@type": "Thing",
+          "name": "Economics"
+        },
+        {
+          "@type": "Thing",
+          "name": "Psychology of money"
+        },
+        {
+          "@type": "Thing",
+          "name": "Financial markets"
+        }
+      ],
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "PodcastSeries",
+      "@id": "https://moneysthematter.com/#podcast",
+      "name": "Money's the Matter",
+      "url": "https://moneysthematter.com/",
+      "description": "A narrative podcast exploring financial history, economics, markets, the psychology of money, and the human stories behind financial systems.",
+      "image": "https://moneysthematter.com/images/logo/mtm-logo.png",
+      "inLanguage": "en-US",
+      "genre": [
+        "Financial History",
+        "Economics",
+        "Money",
+        "Business",
+        "Psychology"
+      ],
+      "author": {
+        "@id": "https://moneysthematter.com/#bryan-yach"
+      },
+      "creator": {
+        "@id": "https://moneysthematter.com/#bryan-yach"
+      },
+      "sameAs": [
+        "https://podcasts.apple.com/podcast/id6797090925",
+        "https://open.spotify.com/show/033ZMVAOk3TJEkOdaIOEJC",
+        "https://music.amazon.com/podcasts/750e1dbd-d1ed-47b5-9a2e-bfb49ba24e11",
+        "https://youtube.com/@moneysthematter"
+      ],
+      "webFeed": "https://feeds.buzzsprout.com/2633998.rss"
+    },
+    {
       "@type": "Person",
       "@id": "https://moneysthematter.com/#bryan-yach",
       "name": "Bryan Yach",
       "honorificSuffix": "CFP®",
-      "url": "https://moneysthematter.com/",
-      "jobTitle": "Financial Planner and Podcast Host"
-    },
-    "creator": {
-      "@id": "https://moneysthematter.com/#bryan-yach"
-    },
-    "sameAs": [
-      "https://podcasts.apple.com/podcast/id6797090925",
-      "https://open.spotify.com/show/033ZMVAOk3TJEkOdaIOEJC",
-      "https://music.amazon.com/podcasts/750e1dbd-d1ed-47b5-9a2e-bfb49ba24e11",
-      "https://youtube.com/@moneysthematter"
-    ],
-    "webFeed": "https://feeds.buzzsprout.com/2633998.rss"
-  }
+      "jobTitle": "Financial Planner and Podcast Host",
+      "url": "https://moneysthematter.com/about/",
+      "knowsAbout": [
+        "Financial planning",
+        "Investing",
+        "Retirement planning",
+        "Economics",
+        "Financial history",
+        "Behavioral finance"
+      ]
+    }
+  ]
+}
   </script>
 
 
@@ -730,7 +796,7 @@
           Episodes
         </a>
 
-        <a href="#about">
+        <a href="/about/">
           About
         </a>
 
@@ -796,11 +862,10 @@
 
           <p class="hero-copy">
 
-            Money's the Matter explores the history,
-            psychology, economics, and ideas behind
-            the financial world through stories about
-            trust, markets, ambition, fear, innovation,
-            and the strange agreements that connect us.
+            Money's the Matter is a narrative podcast about financial history,
+            economics, markets, and the psychology of money. Each episode uses
+            a true story to explain the people, incentives, ideas, and events
+            that shaped the financial world we live in today.
 
           </p>
 
@@ -1184,14 +1249,14 @@
           <p class="about-detail">
 
             <a
-              href="/episodes/trailer/"
+              href="/about/"
               style="
                 color: inherit;
                 font-weight: 700;
               "
             >
 
-              Hear why the show exists →
+              Learn more about the podcast and host →
 
             </a>
 
@@ -1876,7 +1941,7 @@
         </a>
 
 
-        <a href="#about">
+        <a href="/about/">
           About
         </a>
 
